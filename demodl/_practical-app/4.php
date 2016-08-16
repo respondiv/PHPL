@@ -23,6 +23,24 @@
 
  */
 
+
+// exercise 1 and 2 combined
+
+// function that returns value
+function addNumbers($value1,$value2){
+	$sum = $value1 + $value2;
+	return($sum);
+
+}
+
+// call addNumbers function and store it's result
+$result = addNumbers(2,4);
+
+
+echo $result;
+
+
+
 	
 ?>
 

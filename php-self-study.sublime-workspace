@@ -4,6 +4,98 @@
 		"selected_items":
 		[
 			[
+				"con",
+				"convert"
+			],
+			[
+				"add",
+				"addNumbers"
+			],
+			[
+				"val",
+				"value2"
+			],
+			[
+				"value",
+				"value1"
+			],
+			[
+				"valu",
+				"value2"
+			],
+			[
+				"va",
+				"value2"
+			],
+			[
+				"th",
+				"threeDivisible"
+			],
+			[
+				"calc",
+				"calculate"
+			],
+			[
+				"Func",
+				"function"
+			],
+			[
+				"for",
+				"for	for …"
+			],
+			[
+				"fo",
+				"fourSquare"
+			],
+			[
+				"tq",
+				"twoSquare"
+			],
+			[
+				"co",
+				"counter"
+			],
+			[
+				"whil",
+				"while	while …"
+			],
+			[
+				"while",
+				"While"
+			],
+			[
+				"sec",
+				"secondCustomer"
+			],
+			[
+				"name",
+				"nameListRegular"
+			],
+			[
+				"nam",
+				"nameList"
+			],
+			[
+				"nu",
+				"number2"
+			],
+			[
+				"num",
+				"number1"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"city",
+				"cityName"
+			],
+			[
+				"n",
+				"number"
+			],
+			[
 				"ma",
 				"margin-left"
 			],
@@ -16,19 +108,19 @@
 	"buffers":
 	[
 		{
-			"file": "demo/comments.php",
+			"file": "demo/function_return_value.php",
 			"settings":
 			{
-				"buffer_size": 303,
+				"buffer_size": 497,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "demodl/_practical-app/1.php",
+			"file": "demodl/_practical-app/4.php",
 			"settings":
 			{
-				"buffer_size": 593,
-				"line_ending": "Unix"
+				"buffer_size": 728,
+				"line_ending": "Windows"
 			}
 		}
 	],
@@ -39,10 +131,14 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 392.0,
-		"last_filter": "ins",
+		"height": 58.0,
+		"last_filter": "ssphp",
 		"selected_items":
 		[
+			[
+				"ssphp",
+				"Set Syntax: PHP"
+			],
 			[
 				"ins",
 				"Package Control: Install Package"
@@ -64,7 +160,7 @@
 				"Preferences: Browse Packages"
 			]
 		],
-		"width": 512.0
+		"width": 400.0
 	},
 	"console":
 	{
@@ -85,13 +181,36 @@
 	},
 	"expanded_folders":
 	[
-		"/F/laragon/Projects/PHPL",
-		"/F/laragon/Projects/PHPL/demo",
-		"/F/laragon/Projects/PHPL/demodl",
-		"/F/laragon/Projects/PHPL/demodl/_practical-app"
+		"/C/laragon/Projects/PHPL",
+		"/C/laragon/Projects/PHPL/demo",
+		"/C/laragon/Projects/PHPL/demodl",
+		"/C/laragon/Projects/PHPL/demodl/_practical-app"
 	],
 	"file_history":
 	[
+		"/C/laragon/Projects/PHPL/demo/functions_parameter.php",
+		"/C/laragon/Projects/PHPL/demo/constants.php",
+		"/C/laragon/Projects/PHPL/demo/functions.php",
+		"/C/laragon/Projects/PHPL/demo/global_variable_scope.php",
+		"/C/laragon/Projects/PHPL/demo/function_return_value.php",
+		"/C/laragon/Projects/PHPL/demodl/_practical-app/3.php",
+		"/C/laragon/Projects/PHPL/demo/for_each_loop.php",
+		"/C/laragon/Projects/PHPL/demo/switch_statement.php",
+		"/C/laragon/Projects/PHPL/demo/arrays.php",
+		"/C/laragon/Projects/PHPL/demo/math.php",
+		"/C/laragon/Projects/PHPL/demo/for_loop.php",
+		"/C/laragon/Projects/PHPL/demo/forloop.php",
+		"/C/laragon/Projects/PHPL/demo/whileloop.php",
+		"/C/laragon/Projects/PHPL/demo/switchstatement.php",
+		"/C/laragon/Projects/PHPL/demo/comparision_logical_operator.php",
+		"/C/laragon/Projects/PHPL/demo/ifstatement.php",
+		"/C/laragon/Projects/PHPL/demodl/_practical-app/2.php",
+		"/C/laragon/Projects/PHPL/demo/associated_arrays.php",
+		"/C/laragon/Projects/PHPL/demo/blank.php",
+		"/C/laragon/Projects/PHPL/demo/variables.php",
+		"/C/Users/sprasai/Documents/Dropbox/config.inc.php",
+		"/C/laragon/Projects/PHPL/demodl/_practical-app/1.php",
+		"/C/laragon/Projects/PHPL/demo/comments.php",
 		"/C/Users/sushi/AppData/Roaming/Sublime Text 3/Packages/User/Preview.sublime-settings",
 		"/F/laragon/Projects/PHPL/demo/comments.php",
 		"/F/laragon/Projects/PHPL/demo/dynamic_text.php",
@@ -198,7 +317,7 @@
 	],
 	"find":
 	{
-		"height": 23.0
+		"height": 34.0
 	},
 	"find_in_files":
 	{
@@ -212,6 +331,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"value",
+			"];\n",
+			"echo \"<br>\";",
 			"git config --global core.autocrlf true",
 			"example",
 			"desc",
@@ -244,24 +366,24 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "demo/comments.php",
+					"file": "demo/function_return_value.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 303,
+						"buffer_size": 497,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								294,
-								294
+								474,
+								461
 							]
 						],
 						"settings":
@@ -272,24 +394,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "demodl/_practical-app/1.php",
+					"file": "demodl/_practical-app/4.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 593,
+						"buffer_size": 728,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								185,
-								185
+								644,
+								644
 							]
 						],
 						"settings":
@@ -301,7 +423,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -313,7 +435,7 @@
 	},
 	"input":
 	{
-		"height": 0.0
+		"height": 31.0
 	},
 	"layout":
 	{
