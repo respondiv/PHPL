@@ -1,0 +1,392 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"ma",
+				"margin-left"
+			],
+			[
+				"mar",
+				"margin-right"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "demo/comments.php",
+			"settings":
+			{
+				"buffer_size": 303,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "demodl/_practical-app/1.php",
+			"settings":
+			{
+				"buffer_size": 593,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "ins",
+		"selected_items":
+		[
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"ssh",
+				"Set Syntax: HTML"
+			],
+			[
+				"ssht",
+				"Set Syntax: HTML"
+			],
+			[
+				"pac",
+				"Preferences: Browse Packages"
+			]
+		],
+		"width": 512.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/F/laragon/Projects/PHPL",
+		"/F/laragon/Projects/PHPL/demo",
+		"/F/laragon/Projects/PHPL/demodl",
+		"/F/laragon/Projects/PHPL/demodl/_practical-app"
+	],
+	"file_history":
+	[
+		"/C/Users/sushi/AppData/Roaming/Sublime Text 3/Packages/User/Preview.sublime-settings",
+		"/F/laragon/Projects/PHPL/demo/comments.php",
+		"/F/laragon/Projects/PHPL/demo/dynamic_text.php",
+		"/F/laragon/Projects/PHPL/demodl/_blank.php",
+		"/C/Users/sushi/AppData/Roaming/Sublime Text 3/Settings/SideBarEnhancements.json",
+		"/C/Users/sushi/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Users/sushi/AppData/Roaming/Sublime Text 3/Packages/SideBarEnhancements/Side Bar.sublime-settings",
+		"/F/laragon/Projects/PHPL/php-self-study.sublime-project",
+		"/F/laragon/Projects/PHPL/demo/embed.php",
+		"/F/laragon/www/index.php",
+		"/C/Users/sushi/Desktop/pen drive/ESD-USB/key.txt",
+		"/F/wamp/apps/phpmyadmin4.1.14/config.inc.php",
+		"/F/Git/git-commands/commands.txt",
+		"/C/Users/sushi/Desktop/header.php",
+		"/C/Users/sushi/Desktop/.htaccess",
+		"/F/Git/git-commands/example.txt",
+		"/F/Git/git-commands/test.txt",
+		"/C/Users/sushi/.gitconfig",
+		"/C/Users/sushi/.bash_profile",
+		"/C/Users/sushi/.minttyrc",
+		"/C/Users/sushi/.bash_history",
+		"/C/Users/sushi/git-prompt.sh",
+		"/C/Users/sushi/git-completion.bash",
+		"/F/Git/git-commands/commands.xt",
+		"/D/New Text Document.txt",
+		"/F/wamp/www/index.php",
+		"/F/wamp/www/backup-nov-04/wp-config.php",
+		"/F/Nepal/office/Office 2013 KMSmicro Activator v3.10/Office 2010&2013 Install & Activate_EN.txt",
+		"/C/Users/sushi/Downloads/canadapurenutrition_com/canadapurenutrition_com.crt",
+		"/C/Users/sushi/Downloads/canadapurenutrition_com/canadapurenutrition_com.ca-bundle",
+		"/C/Users/sushi/Downloads/canadapurenutrition_com/root.crt",
+		"/C/Users/sushi/Downloads/canadapurenutrition_com/cpn.crt",
+		"/C/Users/sushi/Downloads/Label-info.txt",
+		"/C/Users/sushi/Downloads/cpn/root.crt",
+		"/C/Users/sushi/Downloads/cpn/intermediate.crt",
+		"/C/Users/sushi/Downloads/cpn/intermediate2.crt",
+		"/C/Users/sushi/Downloads/cpn/root.ca.html",
+		"/C/Users/sushi/Downloads/comodo-rsa-domain-validation-sha-2-w-root.ca-bundle",
+		"/C/Users/sushi/Downloads/comodo-rsa-domain-validation-sha-2-intermediates.ca-bundle",
+		"/C/Users/sushi/AppData/Local/Temp/Rar$DIa0.282/description.php",
+		"/C/Users/sushi/AppData/Local/Temp/Rar$DIa0.406/short-description.php",
+		"/C/Users/sushi/AppData/Local/Temp/Rar$DIa0.571/review.php",
+		"/C/Users/sushi/AppData/Local/Temp/Rar$DIa0.915/description.php",
+		"/F/wamp/www/cpn/wp-content/themes/123medicine/woocommerce/single-product/tabs/description.php",
+		"/F/wamp/www/cpn/wp-content/themes/123medicine/woocommerce/single-product/tabs/additional-information.php",
+		"/C/Users/sushi/AppData/Local/Temp/Rar$DIa0.543/description.php",
+		"/F/wamp/www/cpn/wp-content/themes/123medicine/woocommerce/single-product/tabs/tabs.php",
+		"/F/wamp/www/cpn/wp-content/themes/123medicine/woocommerce/single-product/short-description.php",
+		"/F/wamp/www/cpn/wp-content/themes/123medicine/woocommerce/single-product/meta.php",
+		"/F/wamp/www/cpn/wp-content/themes/123medicine/woocommerce/single-product.php",
+		"/D/Software/Office/2010-MS-OFF-GEN/SN NO.txt",
+		"/D/office/Instructions.txt",
+		"/D/key.txt",
+		"/D/Nutrixworld/nw/wp-mail.php",
+		"/D/Windows 7 Pro/key.txt",
+		"/C/Users/sushi/Downloads/RemoveWat/Leggimi-eleminare messagi.txt",
+		"/F/wamp/www/nw/wp-content/themes/nw/style.css",
+		"/F/wamp/www/nw/wp-content/themes/nw/functions.php",
+		"/C/Users/sushi/Downloads/Adobe Acrobat XI Pro Crack with KEYGEN Only/Instructions.txt",
+		"/E/Software/Adobe Compress/serial.txt",
+		"/F/Clients/binarry.txt",
+		"/C/Users/sushi/Documents/gitignore_global.txt",
+		"/C/Users/sushi/Documents/hgignore_global.txt",
+		"/C/Users/sushi/Downloads/specified_ca.sql",
+		"/C/Users/sushi/Downloads/HBP B4 Multi/hbp-b4-multi-lan/wp-content/plugins/yith-woocommerce-wishlist/includes/class.yith-wcwl.php",
+		"/C/Users/sushi/Downloads/HBP B4 Multi/hbp-b4-multi-lan/wp-content/plugins/yith-woocommerce-wishlist/includes/functions.yith-wcwl.php",
+		"/C/Users/sushi/Downloads/HBP B4 Multi/hbp-b4-multi-lan/wp-content/plugins/yith-woocommerce-wishlist/includes/class.yith-wcwl-ui.php",
+		"/C/Users/sushi/Downloads/HBP B4 Multi/hbp-b4-multi-lan/wp-content/plugins/yith-woocommerce-wishlist/includes/class.yith-wcwl-shortcode.php",
+		"/C/Users/sushi/Downloads/HBP B4 Multi/hbp-b4-multi-lan/wp-content/plugins/yith-woocommerce-wishlist/includes/class.yith-wcwl-install.php",
+		"/C/Users/sushi/Downloads/HBP B4 Multi/hbp-b4-multi-lan/wp-content/plugins/yith-woocommerce-wishlist/includes/class.yith-wcwl-init.php",
+		"/C/Users/sushi/Downloads/HBP B4 Multi/hbp-b4-multi-lan/wp-content/plugins/yith-woocommerce-wishlist/includes/class.yith-wcwl-admin-init.php",
+		"/C/Users/sushi/Downloads/HBP B4 Multi/hbp-b4-multi-lan/wp-content/themes/pharmacy/woocommerce/content-single-product.php",
+		"/C/Users/sushi/Downloads/HBP B4 Multi/hbp-b4-multi-lan/wp-content/plugins/yith-woocommerce-wishlist/templates/add-to-wishlist.php",
+		"/C/Users/sushi/Downloads/HBP B4 Multi/hbp-b4-multi-lan/wp-content/plugins/yith-woocommerce-wishlist/templates/add-to-wishlist-button.php",
+		"/C/Users/sushi/Downloads/HBP B4 Multi/hbp-b4-multi-lan/wp-content/themes/pharmacy/woocommerce/single-product.php",
+		"/C/Users/sushi/Downloads/HBP B4 Multi/hbp-b4-multi-lan/wp-content/themes/pharmacy/woocommerce/single-product/product-image-carousel.php",
+		"/C/Users/sushi/Downloads/HBP B4 Multi/hbp-b4-multi-lan/wp-content/themes/pharmacy/woocommerce/single-product/short-description.php",
+		"/C/Users/sushi/Downloads/HBP B4 Multi/hbp-b4-multi-lan/wp-content/themes/pharmacy/css/bl-bootstrap.css",
+		"/C/Users/sushi/Downloads/style.css",
+		"/C/Users/sushi/Downloads/HBP B4 Multi/hbp-b4-multi-lan/wp-content/themes/pharmacy/woocommerce/single-product/product-attributes.php",
+		"/C/Users/sushi/Downloads/HBP B4 Multi/hbp-b4-multi-lan/wp-content/themes/pharmacy/woocommerce/single-product/price.php",
+		"/C/Users/sushi/Downloads/HBP B4 Multi/hbp-b4-multi-lan/wp-content/themes/pharmacy/woocommerce/single-product/meta.php",
+		"/C/Users/sushi/Downloads/HBP B4 Multi/hbp-b4-multi-lan/wp-content/themes/pharmacy/woocommerce/content-product-inner.php",
+		"/C/Users/sushi/Downloads/HBP B4 Multi/hbp-b4-multi-lan/wp-content/themes/pharmacy/woocommerce/content-product-list.php",
+		"/C/Users/sushi/Downloads/HBP B4 Multi/hbp-b4-multi-lan/wp-content/themes/pharmacy/woocommerce/content-product.php",
+		"/C/Users/sushi/Downloads/HBP B4 Multi/hbp-b4-multi-lan/wp-content/themes/pharmacy/woocommerce.php",
+		"/C/Users/sushi/Downloads/HBP B4 Multi/hbp-b4-multi-lan/wp-content/themes/pharmacy/woocommerce/single-product/add-to-cart/simple.php",
+		"/C/Users/sushi/Downloads/mailchimp-for-wp.2.3.8/mailchimp-for-wp/includes/class-form.php",
+		"/C/Users/sushi/Downloads/mailchimp-for-wp.2.3.8/mailchimp-for-wp/includes/views/form-settings.php",
+		"/C/Users/sushi/Downloads/footer.php",
+		"/C/Users/sushi/Downloads/style2.php",
+		"/C/Users/sushi/Downloads/mailchimp-for-wp.2.3.8/mailchimp-for-wp/mailchimp-for-wp.php",
+		"/C/Users/sushi/Downloads/mailchimp-for-wp.2.3.8/mailchimp-for-wp/includes/functions/general.php",
+		"/C/Users/sushi/Downloads/mailchimp-for-wp.2.3.8/mailchimp-for-wp/includes/functions/template.php",
+		"/C/Users/sushi/Downloads/searchform.php",
+		"/F/wamp/www/hp/wp-config.php",
+		"/C/Users/sushi/Desktop/HBP/SSL/happybiopharma_com.combined.crt",
+		"/C/Users/sushi/Desktop/HBP/SSL/AddTrustExternalCARoot.crt",
+		"/C/Users/sushi/Desktop/HBP/SSL/COMODORSAAddTrustCA.crt",
+		"/C/Users/sushi/Desktop/HBP/SSL/COMODORSADomainValidationSecureServerCA.crt",
+		"/C/Users/sushi/Desktop/HBP/SSL/happybiopharma.com.oir.key",
+		"/C/Users/sushi/Desktop/HBP/SSL/happybiopharma.com.key",
+		"/C/Users/sushi/Desktop/HBP/SSL/passphrase.txt"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"git config --global core.autocrlf true",
+			"example",
+			"desc",
+			"des",
+			"happy_bio_pharma",
+			"add to wishlist",
+			"wishlist",
+			"media (max",
+			"use the",
+			"mar",
+			"media",
+			"example.com"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"canadapurenutrition",
+			"nutrix_world",
+			"happybiopharma.com"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "demo/comments.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 303,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								294,
+								294
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "demodl/_practical-app/1.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 593,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								185,
+								185
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "php-self-study.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 243.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
