@@ -25,6 +25,29 @@
 
  */
 
+// exercise 1
+
+echo rand(1, 999);
+
+echo "<br><br>";	
+
+
+// exercise 2
+
+$name = "My Super Long name";
+
+echo strtoupper($name);
+
+echo "<br><br>";	
+
+
+// exercise 3
+
+$newArray = [10,15,20,30, 25];
+
+echo array_sum($newArray);
+
+echo "<br><br>";
 	
 ?>
 

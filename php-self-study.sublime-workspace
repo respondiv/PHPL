@@ -4,96 +4,56 @@
 		"selected_items":
 		[
 			[
-				"con",
-				"convert"
+				"se",
+				"select	Tag"
 			],
 			[
-				"add",
-				"addNumbers"
-			],
-			[
-				"val",
-				"value2"
-			],
-			[
-				"value",
-				"value1"
-			],
-			[
-				"valu",
-				"value2"
-			],
-			[
-				"va",
-				"value2"
-			],
-			[
-				"th",
-				"threeDivisible"
-			],
-			[
-				"calc",
-				"calculate"
-			],
-			[
-				"Func",
-				"function"
+				"t",
+				"tbody	Tag"
 			],
 			[
 				"for",
-				"for	for …"
+				"foreach	foreach …"
+			],
+			[
+				"mysqli",
+				"mysqli_fetch"
+			],
+			[
+				"MYSQ",
+				"mysql_error"
+			],
+			[
+				"user",
+				"username"
+			],
+			[
+				"passw",
+				"password"
+			],
+			[
+				"su",
+				"submit"
+			],
+			[
+				"in",
+				"input	Tag"
 			],
 			[
 				"fo",
-				"fourSquare"
+				"form	Tag"
 			],
 			[
-				"tq",
-				"twoSquare"
+				"arrays",
+				"array_sum"
 			],
 			[
-				"co",
-				"counter"
-			],
-			[
-				"whil",
-				"while	while …"
-			],
-			[
-				"while",
-				"While"
-			],
-			[
-				"sec",
-				"secondCustomer"
-			],
-			[
-				"name",
-				"nameListRegular"
-			],
-			[
-				"nam",
-				"nameList"
-			],
-			[
-				"nu",
-				"number2"
-			],
-			[
-				"num",
-				"number1"
-			],
-			[
-				"print",
+				"pri",
 				"print_r"
 			],
 			[
-				"city",
-				"cityName"
-			],
-			[
-				"n",
-				"number"
+				"strto",
+				"strtoupper"
 			],
 			[
 				"ma",
@@ -107,22 +67,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "demo/function_return_value.php",
-			"settings":
-			{
-				"buffer_size": 497,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "demodl/_practical-app/4.php",
-			"settings":
-			{
-				"buffer_size": 728,
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -131,14 +75,10 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 58.0,
-		"last_filter": "ssphp",
+		"height": 392.0,
+		"last_filter": "ins",
 		"selected_items":
 		[
-			[
-				"ssphp",
-				"Set Syntax: PHP"
-			],
 			[
 				"ins",
 				"Package Control: Install Package"
@@ -160,7 +100,7 @@
 				"Preferences: Browse Packages"
 			]
 		],
-		"width": 400.0
+		"width": 432.0
 	},
 	"console":
 	{
@@ -181,44 +121,40 @@
 	},
 	"expanded_folders":
 	[
-		"/C/laragon/Projects/PHPL",
-		"/C/laragon/Projects/PHPL/demo",
-		"/C/laragon/Projects/PHPL/demodl",
-		"/C/laragon/Projects/PHPL/demodl/_practical-app"
+		"/F/laragon/Projects/PHPL",
+		"/F/laragon/Projects/PHPL/demo",
+		"/F/laragon/Projects/PHPL/demo/mysql",
+		"/F/laragon/Projects/PHPL/demodl/_practical-app"
 	],
 	"file_history":
 	[
-		"/C/laragon/Projects/PHPL/demo/functions_parameter.php",
-		"/C/laragon/Projects/PHPL/demo/constants.php",
-		"/C/laragon/Projects/PHPL/demo/functions.php",
-		"/C/laragon/Projects/PHPL/demo/global_variable_scope.php",
-		"/C/laragon/Projects/PHPL/demo/function_return_value.php",
-		"/C/laragon/Projects/PHPL/demodl/_practical-app/3.php",
-		"/C/laragon/Projects/PHPL/demo/for_each_loop.php",
-		"/C/laragon/Projects/PHPL/demo/switch_statement.php",
-		"/C/laragon/Projects/PHPL/demo/arrays.php",
-		"/C/laragon/Projects/PHPL/demo/math.php",
-		"/C/laragon/Projects/PHPL/demo/for_loop.php",
-		"/C/laragon/Projects/PHPL/demo/forloop.php",
-		"/C/laragon/Projects/PHPL/demo/whileloop.php",
-		"/C/laragon/Projects/PHPL/demo/switchstatement.php",
-		"/C/laragon/Projects/PHPL/demo/comparision_logical_operator.php",
-		"/C/laragon/Projects/PHPL/demo/ifstatement.php",
-		"/C/laragon/Projects/PHPL/demodl/_practical-app/2.php",
-		"/C/laragon/Projects/PHPL/demo/associated_arrays.php",
-		"/C/laragon/Projects/PHPL/demo/blank.php",
-		"/C/laragon/Projects/PHPL/demo/variables.php",
-		"/C/Users/sprasai/Documents/Dropbox/config.inc.php",
-		"/C/laragon/Projects/PHPL/demodl/_practical-app/1.php",
-		"/C/laragon/Projects/PHPL/demo/comments.php",
+		"/F/laragon/Projects/PHPL/demodl/_practical-app/7.php",
+		"/F/laragon/Projects/PHPL/demo/mysql/db.php",
+		"/F/laragon/Projects/PHPL/demo/mysql/login_update.php",
+		"/F/laragon/Projects/PHPL/demo/mysql/login_read.php",
+		"/F/laragon/Projects/PHPL/demo/mysql/login_create.php",
+		"/F/laragon/Projects/PHPL/demo/mysql/login_read_v1.php",
+		"/F/laragon/Projects/PHPL/demo/mysql/login.php",
+		"/F/laragon/Projects/PHPL/demo/form_external_submission.php",
+		"/F/laragon/Projects/PHPL/demo/form_process.php",
+		"/F/laragon/Projects/PHPL/demodl/_practical-app/6.php",
+		"/F/laragon/Projects/PHPL/demodl/_practical-app/5.php",
+		"/F/laragon/Projects/PHPL/demo/predefined_array_functions.php",
+		"/F/laragon/Projects/PHPL/demo/predefined_string_functions.php",
+		"/F/laragon/Projects/PHPL/demo/string_functions.php",
+		"/F/laragon/Projects/PHPL/demo/predefined_math_finctions.php",
 		"/C/Users/sushi/AppData/Roaming/Sublime Text 3/Packages/User/Preview.sublime-settings",
+		"/F/laragon/Projects/PHPL/php-self-study.sublime-project",
+		"/F/laragon/Projects/PHPL/php-self-study.sublime-workspace",
+		"/F/laragon/Projects/PHPL/.gitignore",
 		"/F/laragon/Projects/PHPL/demo/comments.php",
+		"/F/laragon/Projects/PHPL/demodl/_practical-app/1.php",
+		"/F/laragon/Projects/PHPL/README.md",
 		"/F/laragon/Projects/PHPL/demo/dynamic_text.php",
 		"/F/laragon/Projects/PHPL/demodl/_blank.php",
 		"/C/Users/sushi/AppData/Roaming/Sublime Text 3/Settings/SideBarEnhancements.json",
 		"/C/Users/sushi/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
 		"/C/Users/sushi/AppData/Roaming/Sublime Text 3/Packages/SideBarEnhancements/Side Bar.sublime-settings",
-		"/F/laragon/Projects/PHPL/php-self-study.sublime-project",
 		"/F/laragon/Projects/PHPL/demo/embed.php",
 		"/F/laragon/www/index.php",
 		"/C/Users/sushi/Desktop/pen drive/ESD-USB/key.txt",
@@ -317,7 +253,7 @@
 	],
 	"find":
 	{
-		"height": 34.0
+		"height": 23.0
 	},
 	"find_in_files":
 	{
@@ -331,9 +267,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"value",
-			"];\n",
-			"echo \"<br>\";",
+			"\");\n",
 			"git config --global core.autocrlf true",
 			"example",
 			"desc",
@@ -366,66 +300,8 @@
 	"groups":
 	[
 		{
-			"selected": 1,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "demo/function_return_value.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 497,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								474,
-								461
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "demodl/_practical-app/4.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 728,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								644,
-								644
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
