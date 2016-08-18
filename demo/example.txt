@@ -1,0 +1,1 @@
+I am writing inside file via PHP. This is awesome.
