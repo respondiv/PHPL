@@ -1,8 +1,56 @@
-{
+﻿{
 	"auto_complete":
 	{
 		"selected_items":
 		[
+			[
+				"pu",
+				"public"
+			],
+			[
+				"whe",
+				"wheelsData"
+			],
+			[
+				"class",
+				"class_exists"
+			],
+			[
+				"Mo",
+				"MoveWheels"
+			],
+			[
+				"move",
+				"MoveWheels"
+			],
+			[
+				"session_",
+				"session_start"
+			],
+			[
+				"c",
+				"cookieTime"
+			],
+			[
+				"cook",
+				"cookieName"
+			],
+			[
+				"set",
+				"setcookie"
+			],
+			[
+				"sess",
+				"session_start"
+			],
+			[
+				"num",
+				"numberVisits"
+			],
+			[
+				"ex",
+				"expiration"
+			],
 			[
 				"pass",
 				"password"
@@ -100,10 +148,6 @@
 				"number2"
 			],
 			[
-				"num",
-				"number1"
-			],
-			[
 				"print",
 				"print_r"
 			],
@@ -127,17 +171,6 @@
 	},
 	"buffers":
 	[
-		{
-			"contents": " n <?php\n\n	/* *******************************************************\n	Code to read / pull all info from users table of DB\n	*********************************************************/\n\n		global $connection;\n\n		// adding query into variable so it's easy to read and manage\n		$query = \"SELECT * FROM users\";\n		$result = mysqli_query($connection,$query);\n\n		if (!$result) {\n			die(\"Query FAILED \" . mysqli_error($connection));\n		}\n\n		// Store all data from SQL to Array: this contain arrays within array\n\n		$rows = array();\n\n		while ($row = mysqli_fetch_assoc($result)) {\n			$rows[] = $row;\n		}\n\n\n	/* *******************************************************\n		Function to Print ID's of User as select Options\n	*********************************************************/\n	function printId(){\n		global $rows;\n		foreach ($rows as $keys => $values) {\n			$id = $values['id'];\n			echo \"<option value='$id'>$id</option>\";\n		}\n	}\n\n\n	/* *******************************************************\n		Function to list all users as table\n	*********************************************************/\n	function listAllUsers(){\n		global $rows;\n		// rows contain arrays within array (whole table) | $values will contain 1 array at a time (1 row within table)\n		foreach ($rows as $keys => $values) { \n			echo \"<tr>\";\n			//$values will contain 1 array at a time (1 row within table) | $value contain data for each column within row at a time\n			foreach ($values as $key => $value) {\n					echo \"<td>\" . $value . \"</td>\";\n			}\n			echo \"</tr>\";\n		}\n	}\n\n	/* *******************************************************\n		Function to update the user's username and password\n	*********************************************************/\n	function updateUsers(){\n		global $connection;\n		global $username;\n		global $password;\n		$username = $_POST['username'];\n		$password = $_POST['password'];\n		$userid = $_POST['id'];\n\n		// call encrypt function\n		passEncrypt();\n\n\n		$updateQuery = \"UPDATE users SET \";\n		$updateQuery .= \"username = '$username', \";\n		$updateQuery .= \"password = '$password' \";\n		$updateQuery .= \"WHERE	id = $userid \";\n\n		$updateResult = mysqli_query($connection,$updateQuery); \n\n		if(!$updateResult){\n			die(\"QUERY FAILED\" . mysqli_error($connection));\n		}\n\n		header(\"Location: http://demo.dev/mysql/login_delete.php\");\n	}\n\n\n	/* *******************************************************\n		Function to add the user with username and password\n	*********************************************************/\n	function addUsers(){\n		global $connection;\n		global $username;\n		global $password;\n		$username = $_POST['username'];\n		$password = $_POST['password'];\n\n		// call encrypt function\n		passEncrypt();\n\n		// adding query into variable so it's easy to read and manage\n		$query = \"INSERT INTO users(username,password) \";\n		$query .= \"VALUES ('$username','$password')\";\n\n\n		$addResult = mysqli_query($connection,$query);\n\n		if(!$addResult){\n			die(\"QUERY FAILED\" . mysqli_error($connection));\n		}\n\n		header(\"Location: http://demo.dev/mysql/login_delete.php\");\n	}\n\n	/* *******************************************************\n		Function to delete the user's from user table\n	*********************************************************/\n	function deleteUsers(){\n		global $connection;\n\n		$userid = $_POST['id'];\n\n		$deleteQuery = \"DELETE FROM users \";\n		$deleteQuery .= \"WHERE	id = $userid \";\n\n		$deleteResult = mysqli_query($connection,$deleteQuery); \n\n		if(!$deleteResult){\n			die(\"QUERY FAILED\" . mysqli_error($connection));\n		}\n\n		header(\"Location: http://demo.dev/mysql/login_delete.php\");\n	}\n\n		/* *******************************************************\n			Function to encrypt password and prevent mysql injection\n		*********************************************************/\n		function passEncrypt(){\n			global $connection;\n			global $username;\n			global $password;\n			/* 	mysqli_real_escape_string will treat the enter data as regular string including '' or \"\" \n				so when user enter's it, it won't throw any error and accept them as it is.\n				This will preven sql injection because SQL queries (Statement) contains those character as command but\n				they are now treated as regular text input.\n			*/\n			$username = mysqli_real_escape_string($connection,$username);\n			$password = mysqli_real_escape_string($connection,$password);\n\n			// encrypting password\n			$hashFormat	= \"$2y$10$\";\n			$salt = \"thisisveryrandomcrazys\";\n			$hash_and_salt = $hashFormat . $salt;\n\n			$password = crypt($password,$hash_and_salt);\n\n		}\n\n?>",
-			"file": "demo/mysql/functions.php",
-			"file_size": 4641,
-			"file_write_time": 131165343923234895,
-			"settings":
-			{
-				"buffer_size": 4490,
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -146,10 +179,14 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 392.0,
-		"last_filter": "ins",
+		"height": 288.0,
+		"last_filter": "insta",
 		"selected_items":
 		[
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
 			[
 				"ins",
 				"Package Control: Install Package"
@@ -175,7 +212,7 @@
 				"Preferences: Browse Packages"
 			]
 		],
-		"width": 400.0
+		"width": 512.0
 	},
 	"console":
 	{
@@ -198,19 +235,31 @@
 	[
 		"/C/laragon/Projects/PHPL",
 		"/C/laragon/Projects/PHPL/demo",
-		"/C/laragon/Projects/PHPL/demodl",
 		"/C/laragon/Projects/PHPL/demodl/_practical-app"
 	],
 	"file_history":
 	[
+		"/C/laragon/Projects/PHPL/demodl/_practical-app/10.php",
+		"/C/laragon/Projects/PHPL/demo/calss_static.php",
+		"/C/laragon/Projects/PHPL/demo/calss_inheretance.php",
+		"/C/laragon/Projects/PHPL/demo/calss_access.php",
+		"/C/laragon/Projects/PHPL/demo/calss_constructor.php",
+		"/C/laragon/Projects/PHPL/demo/calss_car3.php",
+		"/C/laragon/Projects/PHPL/demo/session1.php",
+		"/C/laragon/Projects/PHPL/demodl/_practical-app/9.php",
+		"/C/laragon/Projects/PHPL/demo/cookies.php",
+		"/C/laragon/Projects/PHPL/demo/session2.php",
+		"/C/laragon/Projects/PHPL/demo/post.php",
+		"/C/laragon/Projects/PHPL/demo/get.php",
+		"/C/laragon/Projects/PHPL/demodl/_36_mysql/functions.php",
 		"/C/laragon/Projects/PHPL/demo/mysql/functions.php",
+		"/C/laragon/Projects/PHPL/demo/mysql/db.php",
 		"/C/laragon/Projects/PHPL/demo/mysql/login_create.php",
 		"/C/laragon/Projects/PHPL/demo/mysql/includes/footer.php",
 		"/C/laragon/Projects/PHPL/demo/mysql/includes/header.php",
 		"/C/laragon/Projects/PHPL/demo/mysql/login_delete.php",
 		"/C/laragon/Projects/PHPL/demo/mysql/login.php",
 		"/C/laragon/Projects/PHPL/demo/mysql/login_update_without_functions.php",
-		"/C/laragon/Projects/PHPL/demo/mysql/db.php",
 		"/C/laragon/Projects/PHPL/demo/functions.php",
 		"/C/laragon/Projects/PHPL/demo/mysql/login_update.php",
 		"/C/laragon/Projects/PHPL/demo/associated_arrays.php",
@@ -317,20 +366,7 @@
 		"/C/Users/sushi/Downloads/style.css",
 		"/C/Users/sushi/Downloads/HBP B4 Multi/hbp-b4-multi-lan/wp-content/themes/pharmacy/woocommerce/single-product/product-attributes.php",
 		"/C/Users/sushi/Downloads/HBP B4 Multi/hbp-b4-multi-lan/wp-content/themes/pharmacy/woocommerce/single-product/price.php",
-		"/C/Users/sushi/Downloads/HBP B4 Multi/hbp-b4-multi-lan/wp-content/themes/pharmacy/woocommerce/single-product/meta.php",
-		"/C/Users/sushi/Downloads/HBP B4 Multi/hbp-b4-multi-lan/wp-content/themes/pharmacy/woocommerce/content-product-inner.php",
-		"/C/Users/sushi/Downloads/HBP B4 Multi/hbp-b4-multi-lan/wp-content/themes/pharmacy/woocommerce/content-product-list.php",
-		"/C/Users/sushi/Downloads/HBP B4 Multi/hbp-b4-multi-lan/wp-content/themes/pharmacy/woocommerce/content-product.php",
-		"/C/Users/sushi/Downloads/HBP B4 Multi/hbp-b4-multi-lan/wp-content/themes/pharmacy/woocommerce.php",
-		"/C/Users/sushi/Downloads/HBP B4 Multi/hbp-b4-multi-lan/wp-content/themes/pharmacy/woocommerce/single-product/add-to-cart/simple.php",
-		"/C/Users/sushi/Downloads/mailchimp-for-wp.2.3.8/mailchimp-for-wp/includes/class-form.php",
-		"/C/Users/sushi/Downloads/mailchimp-for-wp.2.3.8/mailchimp-for-wp/includes/views/form-settings.php",
-		"/C/Users/sushi/Downloads/footer.php",
-		"/C/Users/sushi/Downloads/style2.php",
-		"/C/Users/sushi/Downloads/mailchimp-for-wp.2.3.8/mailchimp-for-wp/mailchimp-for-wp.php",
-		"/C/Users/sushi/Downloads/mailchimp-for-wp.2.3.8/mailchimp-for-wp/includes/functions/general.php",
-		"/C/Users/sushi/Downloads/mailchimp-for-wp.2.3.8/mailchimp-for-wp/includes/functions/template.php",
-		"/C/Users/sushi/Downloads/searchform.php"
+		"/C/Users/sushi/Downloads/HBP B4 Multi/hbp-b4-multi-lan/wp-content/themes/pharmacy/woocommerce/single-product/meta.php"
 	],
 	"find":
 	{
@@ -386,38 +422,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "demo/mysql/functions.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4490,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3,
-								3
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
