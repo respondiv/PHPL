@@ -28,6 +28,21 @@ Step 6: Call the method ShowAll
 
 		
 	*/
+
+	class Dog{
+		public $eye = 2;
+		public $nose = 1;
+		public$furColor = "Red";
+
+		function showAll(){
+			echo "This dog has " . $this->eye . " eyes and has " . $this->nose . " nose. It's fur color is " . $this->furColor;
+		}
+
+	}
+
+	$display = new Dog();
+
+	$display->showAll();
 	
 	?>
 
