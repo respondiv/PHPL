@@ -67,6 +67,14 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "cms/admin/index.php",
+			"settings":
+			{
+				"buffer_size": 10772,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -122,13 +130,13 @@
 	"expanded_folders":
 	[
 		"/F/laragon/Projects/PHPL",
-		"/F/laragon/Projects/PHPL/cmsdl",
-		"/F/laragon/Projects/PHPL/cmsdl/includes",
-		"/F/laragon/Projects/PHPL/demo/mysql",
-		"/F/laragon/Projects/PHPL/demodl"
+		"/F/laragon/Projects/PHPL/cms",
+		"/F/laragon/Projects/PHPL/cms/admin"
 	],
 	"file_history":
 	[
+		"/C/Users/sushi/AppData/Roaming/Sublime Text 3/Packages/User/Preview.sublime-settings",
+		"/F/laragon/Projects/PHPL/cms/admin/index.php",
 		"/F/laragon/Projects/PHPL/cmsdl/includes/db.php",
 		"/F/laragon/Projects/PHPL/demo/mysql/db.php",
 		"/F/laragon/Projects/PHPL/info.php",
@@ -151,7 +159,6 @@
 		"/F/laragon/Projects/PHPL/demo/predefined_string_functions.php",
 		"/F/laragon/Projects/PHPL/demo/string_functions.php",
 		"/F/laragon/Projects/PHPL/demo/predefined_math_finctions.php",
-		"/C/Users/sushi/AppData/Roaming/Sublime Text 3/Packages/User/Preview.sublime-settings",
 		"/F/laragon/Projects/PHPL/php-self-study.sublime-project",
 		"/F/laragon/Projects/PHPL/php-self-study.sublime-workspace",
 		"/F/laragon/Projects/PHPL/.gitignore",
@@ -255,8 +262,7 @@
 		"/C/Users/sushi/Desktop/HBP/SSL/COMODORSAAddTrustCA.crt",
 		"/C/Users/sushi/Desktop/HBP/SSL/COMODORSADomainValidationSecureServerCA.crt",
 		"/C/Users/sushi/Desktop/HBP/SSL/happybiopharma.com.oir.key",
-		"/C/Users/sushi/Desktop/HBP/SSL/happybiopharma.com.key",
-		"/C/Users/sushi/Desktop/HBP/SSL/passphrase.txt"
+		"/C/Users/sushi/Desktop/HBP/SSL/happybiopharma.com.key"
 	],
 	"find":
 	{
@@ -307,8 +313,39 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "cms/admin/index.php",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 10772,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
