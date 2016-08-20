@@ -1,4 +1,3 @@
-<?php include "includes/db.php"                /* Include Navigation */ ?> 
 <?php include "includes/header.php"             /* Include Header */ ?> 
 <?php include "includes/nav.php"                /* Include Navigation */ ?> 
 

@@ -4,6 +4,46 @@
 		"selected_items":
 		[
 			[
+				"update",
+				"update_category"
+			],
+			[
+				"ca",
+				"cat_title_update"
+			],
+			[
+				"cat_",
+				"cat_title"
+			],
+			[
+				"cat",
+				"cat_id_update"
+			],
+			[
+				"mysqli_e",
+				"mysqli_error"
+			],
+			[
+				"con",
+				"connection"
+			],
+			[
+				"mysqli",
+				"mysqli_query"
+			],
+			[
+				"col_",
+				"col_1"
+			],
+			[
+				"search",
+				"search_tags"
+			],
+			[
+				"sea",
+				"search_tags"
+			],
+			[
 				"post_",
 				"post_title"
 			],
@@ -18,10 +58,6 @@
 			[
 				"for",
 				"foreach	foreach …"
-			],
-			[
-				"mysqli",
-				"mysqli_fetch"
 			],
 			[
 				"MYSQ",
@@ -71,30 +107,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "cms/includes/nav.php",
-			"settings":
-			{
-				"buffer_size": 1958,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "cms/index.php",
-			"settings":
-			{
-				"buffer_size": 2644,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "cms/includes/sidebar.php",
-			"settings":
-			{
-				"buffer_size": 2533,
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -104,7 +116,7 @@
 	"command_palette":
 	{
 		"height": 392.0,
-		"last_filter": "ins",
+		"last_filter": "",
 		"selected_items":
 		[
 			[
@@ -128,7 +140,7 @@
 				"Preferences: Browse Packages"
 			]
 		],
-		"width": 432.0
+		"width": 512.0
 	},
 	"console":
 	{
@@ -151,18 +163,43 @@
 	[
 		"/F/laragon/Projects/PHPL",
 		"/F/laragon/Projects/PHPL/cms",
-		"/F/laragon/Projects/PHPL/cms/includes",
-		"/F/laragon/Projects/PHPL/demo/mysql"
+		"/F/laragon/Projects/PHPL/cms/admin",
+		"/F/laragon/Projects/PHPL/cms/admin/css",
+		"/F/laragon/Projects/PHPL/cms/admin/includes"
 	],
 	"file_history":
 	[
+		"/F/laragon/Projects/PHPL/cms/admin/categories.php",
+		"/F/laragon/Projects/PHPL/cms/admin/posts.php",
+		"/F/laragon/Projects/PHPL/cms/admin/css/sb-admin.css",
+		"/F/laragon/Projects/PHPL/cms/admin/functions.php",
+		"/F/laragon/Projects/PHPL/cms/admin/add_post.php",
+		"/F/laragon/Projects/PHPL/cms/admin/includes/side_nav.php",
+		"/F/laragon/Projects/PHPL/cms/admin/includes/header.php",
+		"/F/laragon/Projects/PHPL/cms/admin/includes/update_categories.php",
+		"/F/laragon/Projects/PHPL/cms/includes/header.php",
+		"/F/laragon/Projects/PHPL/cms/admin/includes/footer.php",
+		"/F/laragon/Projects/PHPL/cms/includes/nav.php",
+		"/F/laragon/Projects/PHPL/cms/admin/css/bootstrap.min.css",
+		"/F/laragon/Projects/PHPL/cms/index.php",
+		"/F/laragon/Projects/PHPL/cms/search.php",
+		"/F/laragon/Projects/PHPL/cms/admin/index.php",
+		"/F/laragon/Projects/PHPL/cms/admin/includes/top_nav.php",
+		"/F/laragon/Projects/PHPL/cms/admin/includes/nav.php",
+		"/F/laragon/Projects/PHPL/cms/includes/sidebar.php",
+		"/F/laragon/Projects/PHPL/cms/includes/widget.php",
+		"/F/laragon/Projects/PHPL/cms/includes/sidebar_bak.php",
+		"/F/laragon/Projects/PHPL/cms/search_backup.php",
+		"/C/Users/sushi/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/sushi/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/F/laragon/Projects/PHPL/cms/post.php",
+		"/C/Users/sushi/AppData/Roaming/Sublime Text 3/Packages/User/Emmet.sublime-settings",
+		"/F/laragon/Projects/PHPL/info.php",
 		"/F/laragon/Projects/PHPL/cmsdl/post.php",
 		"/F/laragon/Projects/PHPL/cmsdl/index.php",
 		"/C/Users/sushi/AppData/Roaming/Sublime Text 3/Packages/User/Preview.sublime-settings",
-		"/F/laragon/Projects/PHPL/cms/admin/index.php",
 		"/F/laragon/Projects/PHPL/cmsdl/includes/db.php",
 		"/F/laragon/Projects/PHPL/demo/mysql/db.php",
-		"/F/laragon/Projects/PHPL/info.php",
 		"/F/laragon/Projects/PHPL/demo/deleting_files.php",
 		"/F/laragon/Projects/PHPL/demo/delete.txt",
 		"/F/laragon/Projects/PHPL/demo/reading_files.php",
@@ -259,35 +296,11 @@
 		"/C/Users/sushi/Downloads/HBP B4 Multi/hbp-b4-multi-lan/wp-content/plugins/yith-woocommerce-wishlist/templates/add-to-wishlist.php",
 		"/C/Users/sushi/Downloads/HBP B4 Multi/hbp-b4-multi-lan/wp-content/plugins/yith-woocommerce-wishlist/templates/add-to-wishlist-button.php",
 		"/C/Users/sushi/Downloads/HBP B4 Multi/hbp-b4-multi-lan/wp-content/themes/pharmacy/woocommerce/single-product.php",
-		"/C/Users/sushi/Downloads/HBP B4 Multi/hbp-b4-multi-lan/wp-content/themes/pharmacy/woocommerce/single-product/product-image-carousel.php",
-		"/C/Users/sushi/Downloads/HBP B4 Multi/hbp-b4-multi-lan/wp-content/themes/pharmacy/woocommerce/single-product/short-description.php",
-		"/C/Users/sushi/Downloads/HBP B4 Multi/hbp-b4-multi-lan/wp-content/themes/pharmacy/css/bl-bootstrap.css",
-		"/C/Users/sushi/Downloads/style.css",
-		"/C/Users/sushi/Downloads/HBP B4 Multi/hbp-b4-multi-lan/wp-content/themes/pharmacy/woocommerce/single-product/product-attributes.php",
-		"/C/Users/sushi/Downloads/HBP B4 Multi/hbp-b4-multi-lan/wp-content/themes/pharmacy/woocommerce/single-product/price.php",
-		"/C/Users/sushi/Downloads/HBP B4 Multi/hbp-b4-multi-lan/wp-content/themes/pharmacy/woocommerce/single-product/meta.php",
-		"/C/Users/sushi/Downloads/HBP B4 Multi/hbp-b4-multi-lan/wp-content/themes/pharmacy/woocommerce/content-product-inner.php",
-		"/C/Users/sushi/Downloads/HBP B4 Multi/hbp-b4-multi-lan/wp-content/themes/pharmacy/woocommerce/content-product-list.php",
-		"/C/Users/sushi/Downloads/HBP B4 Multi/hbp-b4-multi-lan/wp-content/themes/pharmacy/woocommerce/content-product.php",
-		"/C/Users/sushi/Downloads/HBP B4 Multi/hbp-b4-multi-lan/wp-content/themes/pharmacy/woocommerce.php",
-		"/C/Users/sushi/Downloads/HBP B4 Multi/hbp-b4-multi-lan/wp-content/themes/pharmacy/woocommerce/single-product/add-to-cart/simple.php",
-		"/C/Users/sushi/Downloads/mailchimp-for-wp.2.3.8/mailchimp-for-wp/includes/class-form.php",
-		"/C/Users/sushi/Downloads/mailchimp-for-wp.2.3.8/mailchimp-for-wp/includes/views/form-settings.php",
-		"/C/Users/sushi/Downloads/footer.php",
-		"/C/Users/sushi/Downloads/style2.php",
-		"/C/Users/sushi/Downloads/mailchimp-for-wp.2.3.8/mailchimp-for-wp/mailchimp-for-wp.php",
-		"/C/Users/sushi/Downloads/mailchimp-for-wp.2.3.8/mailchimp-for-wp/includes/functions/general.php",
-		"/C/Users/sushi/Downloads/mailchimp-for-wp.2.3.8/mailchimp-for-wp/includes/functions/template.php",
-		"/C/Users/sushi/Downloads/searchform.php",
-		"/F/wamp/www/hp/wp-config.php",
-		"/C/Users/sushi/Desktop/HBP/SSL/happybiopharma_com.combined.crt",
-		"/C/Users/sushi/Desktop/HBP/SSL/AddTrustExternalCARoot.crt",
-		"/C/Users/sushi/Desktop/HBP/SSL/COMODORSAAddTrustCA.crt",
-		"/C/Users/sushi/Desktop/HBP/SSL/COMODORSADomainValidationSecureServerCA.crt"
+		"/C/Users/sushi/Downloads/HBP B4 Multi/hbp-b4-multi-lan/wp-content/themes/pharmacy/woocommerce/single-product/product-image-carousel.php"
 	],
 	"find":
 	{
-		"height": 23.0
+		"height": 34.0
 	},
 	"find_in_files":
 	{
@@ -301,6 +314,21 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"th",
+			"detel",
+			"cat_title",
+			">\";\n",
+			"\"",
+			"768",
+			"top",
+			"top10",
+			"Posts",
+			"Post",
+			"Posts",
+			"post_id",
+			" \n",
+			"post_id",
+			"post",
 			"\");\n",
 			"git config --global core.autocrlf true",
 			"example",
@@ -334,105 +362,14 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "cms/includes/nav.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1958,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								786,
-								786
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "cms/index.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2644,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2304,
-								2304
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 270.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "cms/includes/sidebar.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2533,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								938,
-								938
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 23.0
+		"height": 34.0
 	},
 	"input":
 	{
@@ -478,6 +415,30 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"index",
+				"cms\\admin\\index.php"
+			],
+			[
+				"nav",
+				"cms\\includes\\nav.php"
+			],
+			[
+				"side",
+				"cms\\includes\\sidebar.php"
+			],
+			[
+				"inde",
+				"cms\\index.php"
+			],
+			[
+				"na",
+				"cms\\includes\\nav.php"
+			],
+			[
+				"pos",
+				"cms\\post.php"
+			]
 		],
 		"width": 0.0
 	},

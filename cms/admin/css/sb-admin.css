@@ -222,3 +222,23 @@ ul.alert-dropdown {
 .panel-yellow a:hover {
     color: #df8a13;
 }
+
+.top3 { margin-top:3%; }
+.top5 { margin-top:5%; }
+.top10 { margin-top:10%; }
+.bottom { margin-top:5%; }
+.bottom10 { margin-bottom:10%; }
+
+@media(max-width:768px) {
+    .top3-m { margin-top:3%; }
+    .top5-m { margin-top:5%; }
+    .top10-m { margin-top:10%; }
+    .bottom-m { margin-top:5%; }
+    .bottom10-m { margin-bottom:10%; }
+
+}
+
+@media(max-width:980px) {
+    .hide-m {display:none;}
+
+}
