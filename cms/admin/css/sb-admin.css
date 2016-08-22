@@ -238,7 +238,7 @@ ul.alert-dropdown {
 
 }
 
-@media(max-width:980px) {
+@media(max-width:1080px) {
     .hide-m {display:none;}
 
 }

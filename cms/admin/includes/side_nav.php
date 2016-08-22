@@ -11,7 +11,7 @@
                                 <a href="posts.php"><i class="fa fa-fw fa-search"></i> View All Posts</a>
                             </li>
                             <li>
-                                <a href="add_post.php"><i class="fa fa-fw fa-pencil"></i> Add New Post</a>
+                                <a href="posts.php?source=add_post"><i class="fa fa-fw fa-pencil"></i> Add Post</a>
                             </li>
                         </ul>
                     </li>

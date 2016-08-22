@@ -38,6 +38,7 @@
                                         <div class="form-group">
                                             <label for="cat-title">Enter your Edits</label>
                                             <?php updateCategory(); // Update Categories ?>
+                                            <input type="text" class="form-control" name="cat_title_update" value="<?php echo $cat_title; ?>">
                                         </div>
                                         <div class="form-group">
                                             <input class="btn btn-primary" type="submit" name="update" value="Update Category">

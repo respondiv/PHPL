@@ -4,20 +4,116 @@
 		"selected_items":
 		[
 			[
+				"key",
+				"key2"
+			],
+			[
+				"arrays",
+				"arraySort"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"cate",
+				"category_name"
+			],
+			[
+				"cat",
+				"category_name"
+			],
+			[
+				"edit",
+				"editPosts"
+			],
+			[
+				"pos",
+				"post_image"
+			],
+			[
+				"post_image_",
+				"post_image_current"
+			],
+			[
+				"sele",
+				"selectCategories"
+			],
+			[
+				"ca",
+				"cat_title"
+			],
+			[
+				"pu_pos",
+				"pu_post_title"
+			],
+			[
+				"pu_post",
+				"pu_post_title"
+			],
+			[
+				"post_c",
+				"post_comment_count"
+			],
+			[
+				"post",
+				"post_id"
+			],
+			[
+				"edi",
+				"edit_post"
+			],
+			[
+				"dele",
+				"delete_post_id"
+			],
+			[
+				"is",
+				"isset"
+			],
+			[
+				"add",
+				"add_new_post"
+			],
+			[
+				"po",
+				"post_date"
+			],
+			[
+				"post_t",
+				"post_title"
+			],
+			[
+				"IN",
+				"INTO"
+			],
+			[
+				"post_",
+				"post_image"
+			],
+			[
+				"post_im",
+				"post_image_temp"
+			],
+			[
+				"move",
+				"move_uploaded_file"
+			],
+			[
+				"incl",
+				"include"
+			],
+			[
+				"so",
+				"source"
+			],
+			[
 				"update",
 				"update_category"
 			],
 			[
-				"ca",
-				"cat_title_update"
-			],
-			[
 				"cat_",
 				"cat_title"
-			],
-			[
-				"cat",
-				"cat_id_update"
 			],
 			[
 				"mysqli_e",
@@ -42,10 +138,6 @@
 			[
 				"sea",
 				"search_tags"
-			],
-			[
-				"post_",
-				"post_title"
 			],
 			[
 				"se",
@@ -82,10 +174,6 @@
 			[
 				"fo",
 				"form	Tag"
-			],
-			[
-				"arrays",
-				"array_sum"
 			],
 			[
 				"pri",
@@ -164,24 +252,38 @@
 		"/F/laragon/Projects/PHPL",
 		"/F/laragon/Projects/PHPL/cms",
 		"/F/laragon/Projects/PHPL/cms/admin",
-		"/F/laragon/Projects/PHPL/cms/admin/css",
-		"/F/laragon/Projects/PHPL/cms/admin/includes"
+		"/F/laragon/Projects/PHPL/cmsdl/admin",
+		"/F/laragon/Projects/PHPL/cmsdl/admin/includes",
+		"/F/laragon/Projects/PHPL/demo"
 	],
 	"file_history":
 	[
-		"/F/laragon/Projects/PHPL/cms/admin/categories.php",
-		"/F/laragon/Projects/PHPL/cms/admin/posts.php",
-		"/F/laragon/Projects/PHPL/cms/admin/css/sb-admin.css",
 		"/F/laragon/Projects/PHPL/cms/admin/functions.php",
-		"/F/laragon/Projects/PHPL/cms/admin/add_post.php",
-		"/F/laragon/Projects/PHPL/cms/admin/includes/side_nav.php",
-		"/F/laragon/Projects/PHPL/cms/admin/includes/header.php",
-		"/F/laragon/Projects/PHPL/cms/admin/includes/update_categories.php",
+		"/F/laragon/Projects/PHPL/cms/index - Copy.php",
+		"/F/laragon/Projects/PHPL/cms/index.php",
+		"/F/laragon/Projects/PHPL/cms/post.php",
+		"/F/laragon/Projects/PHPL/cms/functions.php",
+		"/F/laragon/Projects/PHPL/demo/mysql/login_read.php",
+		"/F/laragon/Projects/PHPL/demo/mysql/db.php",
+		"/F/laragon/Projects/PHPL/demo/mysql/functions.php",
+		"/F/laragon/Projects/PHPL/cms/includes/comments.php",
 		"/F/laragon/Projects/PHPL/cms/includes/header.php",
+		"/F/laragon/Projects/PHPL/cms/admin/posts.php",
+		"/F/laragon/Projects/PHPL/cms/admin/includes/header.php",
+		"/F/laragon/Projects/PHPL/cms/includes/db.php",
+		"/F/laragon/Projects/PHPL/cms/admin/includes/edit_posts.php",
+		"/F/laragon/Projects/PHPL/cms/admin/includes/add_posts.php",
+		"/F/laragon/Projects/PHPL/cms/admin/includes/edit_posts_bak.php",
+		"/F/laragon/Projects/PHPL/cms/admin/add_post.php",
+		"/F/laragon/Projects/PHPL/cms/admin/categories.php",
+		"/F/laragon/Projects/PHPL/cms/admin/includes/view_all_posts.php",
+		"/F/laragon/Projects/PHPL/cms/admin/css/sb-admin.css",
+		"/F/laragon/Projects/PHPL/cms/admin/includes/side_nav.php",
+		"/F/laragon/Projects/PHPL/demo/mysql/login_update.php",
+		"/F/laragon/Projects/PHPL/cms/admin/includes/update_categories.php",
 		"/F/laragon/Projects/PHPL/cms/admin/includes/footer.php",
 		"/F/laragon/Projects/PHPL/cms/includes/nav.php",
 		"/F/laragon/Projects/PHPL/cms/admin/css/bootstrap.min.css",
-		"/F/laragon/Projects/PHPL/cms/index.php",
 		"/F/laragon/Projects/PHPL/cms/search.php",
 		"/F/laragon/Projects/PHPL/cms/admin/index.php",
 		"/F/laragon/Projects/PHPL/cms/admin/includes/top_nav.php",
@@ -192,22 +294,18 @@
 		"/F/laragon/Projects/PHPL/cms/search_backup.php",
 		"/C/Users/sushi/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
 		"/C/Users/sushi/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
-		"/F/laragon/Projects/PHPL/cms/post.php",
 		"/C/Users/sushi/AppData/Roaming/Sublime Text 3/Packages/User/Emmet.sublime-settings",
 		"/F/laragon/Projects/PHPL/info.php",
 		"/F/laragon/Projects/PHPL/cmsdl/post.php",
 		"/F/laragon/Projects/PHPL/cmsdl/index.php",
 		"/C/Users/sushi/AppData/Roaming/Sublime Text 3/Packages/User/Preview.sublime-settings",
 		"/F/laragon/Projects/PHPL/cmsdl/includes/db.php",
-		"/F/laragon/Projects/PHPL/demo/mysql/db.php",
 		"/F/laragon/Projects/PHPL/demo/deleting_files.php",
 		"/F/laragon/Projects/PHPL/demo/delete.txt",
 		"/F/laragon/Projects/PHPL/demo/reading_files.php",
 		"/F/laragon/Projects/PHPL/demo/example.txt",
 		"/F/laragon/Projects/PHPL/demo/embed.php",
-		"/F/laragon/Projects/PHPL/demo/mysql/login_update.php",
 		"/F/laragon/Projects/PHPL/demodl/_practical-app/7.php",
-		"/F/laragon/Projects/PHPL/demo/mysql/login_read.php",
 		"/F/laragon/Projects/PHPL/demo/mysql/login_create.php",
 		"/F/laragon/Projects/PHPL/demo/mysql/login_read_v1.php",
 		"/F/laragon/Projects/PHPL/demo/mysql/login.php",
@@ -287,16 +385,7 @@
 		"/C/Users/sushi/Downloads/specified_ca.sql",
 		"/C/Users/sushi/Downloads/HBP B4 Multi/hbp-b4-multi-lan/wp-content/plugins/yith-woocommerce-wishlist/includes/class.yith-wcwl.php",
 		"/C/Users/sushi/Downloads/HBP B4 Multi/hbp-b4-multi-lan/wp-content/plugins/yith-woocommerce-wishlist/includes/functions.yith-wcwl.php",
-		"/C/Users/sushi/Downloads/HBP B4 Multi/hbp-b4-multi-lan/wp-content/plugins/yith-woocommerce-wishlist/includes/class.yith-wcwl-ui.php",
-		"/C/Users/sushi/Downloads/HBP B4 Multi/hbp-b4-multi-lan/wp-content/plugins/yith-woocommerce-wishlist/includes/class.yith-wcwl-shortcode.php",
-		"/C/Users/sushi/Downloads/HBP B4 Multi/hbp-b4-multi-lan/wp-content/plugins/yith-woocommerce-wishlist/includes/class.yith-wcwl-install.php",
-		"/C/Users/sushi/Downloads/HBP B4 Multi/hbp-b4-multi-lan/wp-content/plugins/yith-woocommerce-wishlist/includes/class.yith-wcwl-init.php",
-		"/C/Users/sushi/Downloads/HBP B4 Multi/hbp-b4-multi-lan/wp-content/plugins/yith-woocommerce-wishlist/includes/class.yith-wcwl-admin-init.php",
-		"/C/Users/sushi/Downloads/HBP B4 Multi/hbp-b4-multi-lan/wp-content/themes/pharmacy/woocommerce/content-single-product.php",
-		"/C/Users/sushi/Downloads/HBP B4 Multi/hbp-b4-multi-lan/wp-content/plugins/yith-woocommerce-wishlist/templates/add-to-wishlist.php",
-		"/C/Users/sushi/Downloads/HBP B4 Multi/hbp-b4-multi-lan/wp-content/plugins/yith-woocommerce-wishlist/templates/add-to-wishlist-button.php",
-		"/C/Users/sushi/Downloads/HBP B4 Multi/hbp-b4-multi-lan/wp-content/themes/pharmacy/woocommerce/single-product.php",
-		"/C/Users/sushi/Downloads/HBP B4 Multi/hbp-b4-multi-lan/wp-content/themes/pharmacy/woocommerce/single-product/product-image-carousel.php"
+		"/C/Users/sushi/Downloads/HBP B4 Multi/hbp-b4-multi-lan/wp-content/plugins/yith-woocommerce-wishlist/includes/class.yith-wcwl-ui.php"
 	],
 	"find":
 	{
@@ -314,6 +403,15 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"{$",
+			"editPostsStep1",
+			"get_val",
+			";",
+			"$row",
+			"pu_",
+			"pu",
+			"_POST",
+			">\n",
 			"th",
 			"detel",
 			"cat_title",
@@ -415,6 +513,14 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"fu",
+				"cms\\admin\\functions.php"
+			],
+			[
+				"vi",
+				"cms\\admin\\includes\\view_all_posts.php"
+			],
 			[
 				"index",
 				"cms\\admin\\index.php"

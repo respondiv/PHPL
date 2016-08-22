@@ -2,8 +2,8 @@
 
 	$connection = mysqli_connect(
 		'localhost', //host
-		'phpl', // db username
-		'PHPlearn', // password
+		'root', // db username
+		'', // password
 		'phpl' // db name
 		);
 	if(!$connection){
