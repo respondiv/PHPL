@@ -17,7 +17,8 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php viewAllComments();       //Display all posts ?>
-                                <?php //deletePosts();     // Delete selected posts ?>
+                                <?php viewAllComments();       //Display all comments ?>
+                                <?php deleteComments();     // Delete selected comments ?>
+                                <?php approveDeclineComments();     // Approve / Decline selected comments ?>
                             </tbody>
                         </table> 

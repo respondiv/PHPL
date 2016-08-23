@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"fu",
+				"function"
+			],
+			[
 				"comment_pos",
 				"comment_post_id"
 			],
@@ -261,14 +265,21 @@
 	},
 	"expanded_folders":
 	[
-		"/C/laragon/Projects/PHPL",
-		"/C/laragon/Projects/PHPL/cms",
-		"/C/laragon/Projects/PHPL/cms/admin",
-		"/C/laragon/Projects/PHPL/cms/admin/includes",
-		"/C/laragon/Projects/PHPL/cms/includes"
+		"/F/laragon/Projects/PHPL",
+		"/F/laragon/Projects/PHPL/cms",
+		"/F/laragon/Projects/PHPL/cms/admin",
+		"/F/laragon/Projects/PHPL/cms/admin/includes",
+		"/F/laragon/Projects/PHPL/cms/includes"
 	],
 	"file_history":
 	[
+		"/F/laragon/Projects/PHPL/cms/includes/comments.php",
+		"/F/laragon/Projects/PHPL/cms/includes/footer.php",
+		"/F/laragon/Projects/PHPL/cms/functions.php",
+		"/F/laragon/Projects/PHPL/cms/admin/includes/edit_comments.php",
+		"/F/laragon/Projects/PHPL/cms/admin/functions.php",
+		"/F/laragon/Projects/PHPL/cms/admin/includes/edit_posts.php",
+		"/F/laragon/Projects/PHPL/cms/admin/includes/view_all_comments.php",
 		"/C/laragon/Projects/PHPL/cms/admin/includes/side_nav.php",
 		"/C/laragon/Projects/PHPL/cms/functions.php",
 		"/C/laragon/Projects/PHPL/cms/post.php",
@@ -389,14 +400,7 @@
 		"/C/Users/sushi/Downloads/RemoveWat/Leggimi-eleminare messagi.txt",
 		"/F/wamp/www/nw/wp-content/themes/nw/style.css",
 		"/F/wamp/www/nw/wp-content/themes/nw/functions.php",
-		"/C/Users/sushi/Downloads/Adobe Acrobat XI Pro Crack with KEYGEN Only/Instructions.txt",
-		"/E/Software/Adobe Compress/serial.txt",
-		"/F/Clients/binarry.txt",
-		"/C/Users/sushi/Documents/gitignore_global.txt",
-		"/C/Users/sushi/Documents/hgignore_global.txt",
-		"/C/Users/sushi/Downloads/specified_ca.sql",
-		"/C/Users/sushi/Downloads/HBP B4 Multi/hbp-b4-multi-lan/wp-content/plugins/yith-woocommerce-wishlist/includes/class.yith-wcwl.php",
-		"/C/Users/sushi/Downloads/HBP B4 Multi/hbp-b4-multi-lan/wp-content/plugins/yith-woocommerce-wishlist/includes/functions.yith-wcwl.php"
+		"/C/Users/sushi/Downloads/Adobe Acrobat XI Pro Crack with KEYGEN Only/Instructions.txt"
 	],
 	"find":
 	{
@@ -414,6 +418,29 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"\"",
+			"arraySort",
+			"';",
+			"\"",
+			"_comment",
+			"post",
+			"decline",
+			"post",
+			"POST",
+			"post",
+			"POST",
+			"post",
+			"POST",
+			"post",
+			"POST",
+			"post",
+			"tags",
+			"post",
+			"post_id",
+			"post",
+			"tags",
+			"post",
+			"posts",
 			"$P",
 			"_GET",
 			"'];\n",

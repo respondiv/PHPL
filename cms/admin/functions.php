@@ -446,16 +446,13 @@
         // Check various Case and display the correct CRUD page request 
 
         switch ($source) {
-            case 'add_post':
-                include "includes/add_posts.php";      // Include add_posts
-                break;
 
-            case 'edit_post':
-                include "includes/edit_posts.php";      // Include edit_posts
+            case 'edit_comment':
+                include "includes/edit_comments.php";      // Include edit_comments
                 break;
             
             default:
-                include "includes/view_all_comments.php";      // Include view_all_posts by default
+                include "includes/view_all_comments.php";      // Include view_all_comments by default
                 break;
         }
 
@@ -508,6 +505,7 @@
             return $rows;       
      }
 
+     // View all comments
      function viewAllComments(){
          $new_array = queryAllComments();
 
@@ -518,7 +516,7 @@
             echo "</div>";
         }
         else{
-            $new_array = arraySort($new_array, 'comment_date', SORT_DESC);
+            $new_array = arraySort($new_array, 'comment_id', SORT_DESC);
             foreach ($new_array as $key => $value) {
                 echo "<tr>";
                 echo "<td class='hide-m'>{$value['comment_id']}</td>";
@@ -530,7 +528,7 @@
                 echo "<td class='hide-m'>{$value['comment_date']}</td>";
                 echo "<td><a href='comments.php?source=edit_comment&comment_id={$value['comment_id']}'> Edit </a> | ";
                 if ($value["comment_status"] == "approved") {
-                    echo "<a href='comments.php?unapprove={$value['comment_id']}'> Unapprove </a> | ";
+                    echo "<a href='comments.php?decline={$value['comment_id']}'> Decline </a> | ";
                 }
                 else{
                     echo "<a href='comments.php?approve={$value['comment_id']}'> Approve </a> | ";
@@ -542,8 +540,174 @@
     }
 
 
+    //  Delete Selected Comments
+    function deleteComments(){
+        global $connection;
+        // Delete Selected Categories
+        if (isset($_GET['delete'])) {
+            
+            $comment_id_delete = $_GET['delete'];
+
+            // if comments status is approved then decrease the no of comment in posts.
+            $comment_status = geCommentStatusByID($comment_id_delete);
+            if ($comment_status == 'approved') {
+                // Update comments count by -1 
+                $comment_post_id = getPostIDbyCommentID($comment_id_delete);
+                $query = "UPDATE POSTS SET post_comment_count = post_comment_count - 1 ";
+                $query .= "WHERE post_id = $comment_post_id ";
+
+                $update_post_comment_count = mysqli_query($connection,$query);
+
+               // Check if the query is good
+               querryCheck($update_post_comment_count);
+            }
 
 
+            $query = "DELETE FROM comments WHERE comment_id = {$comment_id_delete}";
+            $detele_comment = mysqli_query($connection, $query);
+            // Check if the query is good
+            querryCheck($detele_comment);
+
+            header("Location: comments.php");
+        }
+    }
+
+
+    // Edit Comments: Step 1 - Display the existing comments inside the input fields
+    function editCommentsStep1(){
+        global $connection;
+        if (isset($_GET['comment_id'])) {
+            $comment_id_update = $_GET['comment_id'];
+            $query = "SELECT * FROM comments WHERE comment_id = $comment_id_update ";
+            $edit_post_comment_id = mysqli_query($connection, $query);
+
+            // Check if the query is good
+            querryCheck($edit_post_comment_id);
+
+            while($row = mysqli_fetch_assoc($edit_post_comment_id)){
+                $comment_id = $row['comment_id'];
+                $comment_status = $row['comment_status'];
+                $comment_content = $row['comment_content'];
+                $comment_author = $row['comment_author'];
+                $comment_email = $row['comment_email'];
+                return compact('comment_id','comment_status','comment_content','comment_author','comment_email');                              
+            }
+        }
+
+    }
+
+    // Step 2: Update the entered comment content when Update button is pressed
+    function editCommentsStep2(){
+        global $connection;
+
+        // retriving couple values from editCommentsStep1() to resuse here 
+        $get_val = editCommentsStep1();
+        $comment_id = $get_val['comment_id'];
+        
+        if (isset($_POST['update_comment'])) {
+            //$comment_status = $_POST['comment_status'];
+            $comment_content = $_POST['comment_content'];
+            $comment_author = $_POST['comment_author'];
+            $comment_email = $_POST['comment_email'];
+
+            $query = "UPDATE comments SET ";
+            //$query .= "comment_status = '{$comment_status}', ";
+            $query .= "comment_content = '{$comment_content}', ";
+            $query .= "comment_author = '{$comment_author}', ";
+            $query .= "comment_email = '{$comment_email}' ";
+            $query .= "WHERE comment_id = {$comment_id} ";
+
+            $update_comment = mysqli_query($connection, $query);
+            // Check if the query is good
+            querryCheck($update_comment);
+
+
+            header("Location: comments.php?source=edit_comment&comment_id={$comment_id}");
+        }
+    }
+
+
+    // Approve / Decline Comments
+
+    function approveDeclineComments(){
+        global $connection;
+        // Decline Selected Comments
+        if (isset($_GET['decline'])) {
+            
+            $comment_id_decline = $_GET['decline'];
+            $query = "UPDATE comments SET comment_status = 'decline' WHERE comment_id = {$comment_id_decline}";
+            $decline_comment = mysqli_query($connection, $query);
+            // Check if the query is good
+            querryCheck($decline_comment);
+
+            // Update comments count by -1 
+            $comment_post_id = getPostIDbyCommentID($comment_id_decline);
+            $query = "UPDATE POSTS SET post_comment_count = post_comment_count - 1 ";
+            $query .= "WHERE post_id = $comment_post_id ";
+
+            $update_post_comment_count = mysqli_query($connection,$query);
+
+           // Check if the query is good
+           querryCheck($update_post_comment_count);
+
+            header("Location: comments.php");
+        }
+
+        // Approve Selected Comments
+        if (isset($_GET['approve'])) {
+            
+            $comment_id_approve = $_GET['approve'];
+            $query = "UPDATE comments SET comment_status = 'approved' WHERE comment_id = {$comment_id_approve}";
+            $approve_comment = mysqli_query($connection, $query);
+            // Check if the query is good
+            querryCheck($approve_comment);
+
+            // Update comments count by +1
+            $comment_post_id = getPostIDbyCommentID($comment_id_approve);
+            $query = "UPDATE POSTS SET post_comment_count = post_comment_count + 1 ";
+            $query .= "WHERE post_id = $comment_post_id ";
+
+            $update_post_comment_count = mysqli_query($connection,$query);
+
+           // Check if the query is good
+           querryCheck($update_post_comment_count);
+
+            header("Location: comments.php");
+        }
+
+    }
+
+
+    // Get Associated Post ID by providing comment ID
+    function getPostIDbyCommentID($comment_id){
+        global $connection;
+        $query = "SELECT * FROM comments WHERE comment_id = $comment_id ";
+        $find_post_id = mysqli_query($connection,$query);
+
+        querryCheck($find_post_id);
+
+        while($row = mysqli_fetch_assoc($find_post_id)){
+            $post_id = $row['comment_post_id']; 
+            return $post_id;
+        }
+
+    }
+
+
+    // Get comment Status by providing comment ID
+    function geCommentStatusByID($comment_id){
+        global $connection;
+        $query = "SELECT * FROM comments WHERE comment_id = $comment_id ";
+        $comment_status = mysqli_query($connection,$query);
+
+        querryCheck($comment_status);
+
+        while($row = mysqli_fetch_assoc($comment_status)){
+            $comment_current_status = $row['comment_status']; 
+            return $comment_current_status;
+        }
+
+    }
 
 
 ?>

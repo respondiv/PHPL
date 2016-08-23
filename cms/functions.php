@@ -515,11 +515,47 @@
 
            //$comment_id = mysqli_insert_id($connection);
 
+           global $SuccessMessageForComments;
+           $SuccessMessageForComments = "Success";         
+
+        }
+    }
+
+    // Display Comments
+    function displayComments(){
+        global $connection;
+        $comment_post_id = currentPostID();
+        $query = "SELECT * FROM comments WHERE comment_post_id = {$comment_post_id} ";
+        $query .= "AND comment_status = 'approved' ";
+        $query .= "ORDER BY comment_id DESC ";
+
+        $select_all_comments = mysqli_query($connection,$query);
+
+        // Check if the query is good
+        querryCheck($select_all_comments);
+
+        while($row = mysqli_fetch_assoc($select_all_comments)){
+            $comment_date = $row['comment_date'];
+            $comment_content = $row['comment_content'];
+            $comment_author = $row['comment_author'];
+                echo "<div class='media'>";
+                    echo "<a class='pull-left' href='#'>";
+                        echo "<img class='media-object' src='http://placehold.it/64x64' alt=''>";
+                    echo "</a>";
+                    echo "<div class='media-body'>";
+                        echo "<h4 class='media-heading'>{$comment_author}";
+                            echo "<small>{$comment_date}</small>";
+                        echo "</h4>";
+                        echo $comment_content;
+                    echo "</div>";
+                echo "</div>";
+
+
         }
 
-
-
     }
+
+
 
 
 
