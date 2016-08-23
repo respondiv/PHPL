@@ -28,8 +28,40 @@
 		 
 			 */
 
-		
+		$number1 = 10;
+		$number2 = 20;
 
+		echo " sum of " . $number1 . " and " . $number2 . " is ";
+
+		echo $number1 + $number2;
+
+		echo "<br>";
+
+		$nameList = array('firstCustomer' => 'John', 'secondCustomer' => 'Marry', 'thirdCustomer' => 'Helen' );
+
+		$nameListRegular = array("John", "Marry", "Helen");
+
+		echo "print_r of Regular array";
+
+		echo "<br>";
+
+		print_r($nameListRegular);
+
+		echo "<br>";
+
+		echo " Printing Second value of regular array " . $nameListRegular[1];
+
+		echo "<br>";
+
+		echo "print_r of Associated Array";
+
+		echo "<br>";
+
+		print_r($nameList);
+
+		echo "<br>";
+
+		echo " Printing Second value of Associated array " . $nameList['secondCustomer'];
 
 		?>
 
