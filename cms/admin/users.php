@@ -10,7 +10,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                                             
-                        <?php diffCrudInPosts();    // display dirrent pages / forms for CRUD depending upon user's interation is same page  ?>        
+                        <?php diffCrudInUsers();    // display dirrent users / forms for CRUD depending upon user's interation is same page  ?>        
                                                
                     </div>
                 </div>

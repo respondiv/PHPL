@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Aug 30, 2016 at 02:25 PM
+-- Generation Time: Aug 24, 2016 at 04:00 AM
 -- Server version: 5.7.13-log
 -- PHP Version: 7.0.9
 
@@ -103,7 +103,8 @@ INSERT INTO `posts` (`post_id`, `post_category_id`, `post_title`, `post_author`,
 (10, 3, 'My New Bootstrap Project', 'David', '2016-08-30', 'bootstrap3.jpg', 'This is my new Bootstrap Projects.\r\n\r\nSpace, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go where no man has gone before.\r\n\r\nThe path of a cosmonaut is not an easy, triumphant march to glory. You have to get to know the meaning not just of joy but also of grief, before being allowed in the spacecraft cabin.\r\n', 'bootstrap, 3, david', 'published', 0),
 (11, 2, 'HTML 5 is a new thing', 'Jane Doe', '2016-08-30', 'html.jpg', 'As the title says "HTML 5 is a new thing".\r\n\r\nSpace, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go where no man has gone before.\r\n\r\nThe path of a cosmonaut is not an easy, triumphant march to glory. You have to get to know the meaning not just of joy but also of grief, before being allowed in the spacecraft cabin.\r\n\r\n								', 'HTML, 5, jane, doe', 'published', 0),
 (12, 4, 'JQuery is JavaScript in Steroid', 'JAVA Guy', '2016-08-11', 'javascript2.jpg', 'JQuery is JavaScript in Steroid, no comments there.\r\n\r\nThe path of a cosmonaut is not an easy, triumphant march to glory. You have to get to know the meaning not just of joy but also of grief, before being allowed in the spacecraft cabin.\r\n\r\nSpace, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go where no man has gone before.\r\n	\r\nThe path of a cosmonaut is not an easy, triumphant march to glory. You have to get to know the meaning not just of joy but also of grief, before being allowed in the spacecraft cabin.\r\n\r\nSpace, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go where no man has gone before.\r\n\r\n\r\n																', 'Javascript, Jquery, Java, Guy', 'published', 0),
-(13, 3, 'BootStrap makes my life easier', 'BootStrap ', '2016-08-10', 'bootstrap2.jpg', 'As a designer BootStrap makes my life easier.\r\n\r\nThe path of a cosmonaut is not an easy, triumphant march to glory. You have to get to know the meaning not just of joy but also of grief, before being allowed in the spacecraft cabin.\r\n\r\nSpace, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go where no man has gone before.\r\n	\r\nThe path of a cosmonaut is not an easy, triumphant march to glory. You have to get to know the meaning not just of joy but also of grief, before being allowed in the spacecraft cabin.\r\n\r\nSpace, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go where no man has gone before.\r\n								', 'bootstrap, designer', 'draft', 0);
+(13, 3, 'BootStrap makes my life easier', 'BootStrap ', '2016-08-10', 'bootstrap2.jpg', 'As a designer BootStrap makes my life easier.\r\n\r\nThe path of a cosmonaut is not an easy, triumphant march to glory. You have to get to know the meaning not just of joy but also of grief, before being allowed in the spacecraft cabin.\r\n\r\nSpace, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go where no man has gone before.\r\n	\r\nThe path of a cosmonaut is not an easy, triumphant march to glory. You have to get to know the meaning not just of joy but also of grief, before being allowed in the spacecraft cabin.\r\n\r\nSpace, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go where no man has gone before.\r\n								', 'bootstrap, designer', 'draft', 0),
+(14, 1, 'adasd', 'asdasd', '2016-08-23', '', '		asdasdasds						', 'asdasdasd', 'draft', 0);
 
 -- --------------------------------------------------------
 
@@ -112,7 +113,7 @@ INSERT INTO `posts` (`post_id`, `post_category_id`, `post_title`, `post_author`,
 --
 
 CREATE TABLE `users` (
-  `id` int(5) NOT NULL,
+  `user_id` int(5) NOT NULL,
   `username` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   `user_firstname` varchar(255) NOT NULL,
@@ -121,16 +122,19 @@ CREATE TABLE `users` (
   `user_image` text NOT NULL,
   `user_role` varchar(255) NOT NULL,
   `user_status` varchar(255) NOT NULL,
-  `randSalt` varchar(255) NOT NULL
+  `user_randSalt` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `username`, `password`, `user_firstname`, `user_lastname`, `user_email`, `user_image`, `user_role`, `user_status`, `randSalt`) VALUES
+INSERT INTO `users` (`user_id`, `username`, `password`, `user_firstname`, `user_lastname`, `user_email`, `user_image`, `user_role`, `user_status`, `user_randSalt`) VALUES
 (1, 'cms', 'cms1234', 'CMS', 'Guy', 'cmsguy@gmail.com', 'cms_guy.png', 'admin', 'approved', ''),
-(2, 'cmsuser', 'cmsuser1234', 'User', 'CMS', 'user@cms.ca', 'user_cms.png', 'subscriber', 'approved', '');
+(2, 'cmsuser', 'cmsuser1234', 'User', 'CMS', 'user@cms.ca', 'user_cms.png', 'subscriber', 'declined', ''),
+(5, 'user', 'user1234', 'Bruce', 'Wayne', 'bruce@wayne.ca', 'user_cms.png', 'subscriber', 'approved', '0'),
+(7, 'superadmin', 'superadmin1234', 'Super', 'Admin', 'super@admin.ca', 'user_female.png', 'admin', 'declined', '0'),
+(8, 'one', 'two', 'three', 'four', 'five@six.com', 'cms_guy.png', 'subscriber', 'approved', '0');
 
 --
 -- Indexes for dumped tables
@@ -158,7 +162,7 @@ ALTER TABLE `posts`
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`user_id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -178,12 +182,12 @@ ALTER TABLE `comments`
 -- AUTO_INCREMENT for table `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `post_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `post_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `user_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

@@ -1,59 +1,81 @@
 						<?php
 
-							// get current content / values of post from the DB using editPostsStep1() functions
-	   						$get_values = editPostsStep1();
-	   						$post_id = $get_values['post_id'];
-					        $post_status = $get_values['post_status'];
-					        $post_title = $get_values['post_title'];
-					        $post_content = $get_values['post_content'];
-					        $post_category_id = $get_values['post_category_id'];
-					        $post_author = $get_values['post_author'];
-					        $post_tags = $get_values['post_tags'];
-					        $post_image_current = $get_values['post_image_current'];
-				         	$post_date = $get_values['post_date'];
-				         	$post_comment_count = $get_values['post_comment_count'];
+							// get current content / values of post from the DB using editUsersStep1() functions
+	   						$get_values = editUsersStep1();
+	   						$user_id = $get_values['user_id']; 
+			                $username = $get_values['username']; 
+			                $password = $get_values['password']; 
+			                $user_firstname = $get_values['user_firstname']; 
+			                $user_lastname = $get_values['user_lastname']; 
+			                $user_image_current = $get_values['user_image']; 
+			                $user_email = $get_values['user_email']; 
+			                $user_role = $get_values['user_role'];
+			                $user_status = $get_values['user_status'];
+			                $user_randSalt = $get_values['user_randSalt'];
 
-						  	// Update the existing post with the new values using editPostsStep2() functions
-						  	editPostsStep2();
+						  	// Update the existing post with the new values using editUsersStep2() functions
+						  	editUsersStep2();
 
 
 					    ?>
 
 						<h3 class="page-header">
-                            Edit Posts:
-                            <small> Here you can Edit your Posts</small>
+                            Edit Users:
+                            <small> Here you can Edit your User Information</small>
                         </h3>
-						<!-- Form to Edit Post -->
+
+						<!-- Form to Edit Users -->
+						<!-- Form to Add Users -->
                         <form action="" method="post" enctype="multipart/form-data">    
      
 							<div class="form-group">
-								<label for="post_status">Post Status</label>
-								<select name="post_status" id="">
-									<?php if ($post_status == "draft"){ ?>
-									<option value="draft" selected>Draft</option>
-									<option value="published">Published</option>
+								<label for="user_status">User Status</label>
+								<select name="user_status" id="">
+									<?php if ($user_status == "approved"){ ?>
+									<option value="approved" selected>Approve</option>
+									<option value="declined">Decline</option>
 									<?php } else { ?>
-									<option value="published" selected>Published</option>
-									<option value="draft">Draft</option>
+									<option value="approved">Approve</option>
+									<option value="declined" selected>Decline</option>
 									<?php } ?>
 								</select>
 							</div>
 
 							<div class="form-group">
-								<label for="post_title">Post Title</label>
-								<input type="text" class="form-control" name="post_title" value="<?php echo $post_title; ?>">
+								<label for="username">User Name</label>
+								<input type="text" class="form-control" name="username" value="<?php echo $username; ?>">
 							</div>
 
 							<div class="form-group">
-								<label for="post_content">Post Content</label>
-								<textarea class="form-control" name="post_content" id="" cols="30" rows="10"><?php echo $post_content; ?>
-								</textarea>
+								<label for="password">Password</label>
+								<input type="password" class="form-control" name="password" value="<?php echo $password; ?>">
 							</div>
 
 							<div class="form-group">
-								<label for="post_category_id">Post Category</label>
-								<select name="post_category_id" id="">
-									<?php selectCategories(); ?>
+								<label for="user_firstname">First Name</label>
+								<input type="text" class="form-control" name="user_firstname" value="<?php echo $user_firstname; ?>">
+							</div>
+
+							<div class="form-group">
+								<label for="user_lastname">Last Name</label>
+								<input type="text" class="form-control" name="user_lastname" value="<?php echo $user_lastname; ?>">
+							</div>
+
+							<div class="form-group">
+								<label for="user_email">Email</label>
+								<input type="email" class="form-control" name="user_email" value="<?php echo $user_email; ?>">
+							</div>
+
+							<div class="form-group">
+								<label for="user_role">Role</label>
+								<select name="user_role" id="">
+									<?php if ($user_role == "admin"){ ?>
+									<option value="admin" selected> Admin</option>
+									<option value="subscriber"> Subscriber</option>
+									<?php } else { ?>
+									<option value="admin"> Admin</option>
+									<option value="subscriber" selected> Subscriber</option>
+									<?php } ?>
 								</select>
 							</div>
 							
@@ -67,28 +89,13 @@
 							</div> -->
 
 							<div class="form-group">
-								<label for="post_author">Post Author</label>
-								<input type="text" class="form-control" name="post_author" value="<?php echo $post_author; ?>">
+								<label for="user_image">User Image</label>
+								<p><img src="images/users/<?php echo $user_image_current; ?>" width="50em" /></p>
+								<input type="file"  name="user_image">
 							</div>
 
 							<div class="form-group">
-								<label for="post_date">Post Date</label>
-								<input type="date" class="form-control" name="post_date" value="<?php echo $post_date; ?>">
-							</div>
-
-							<div class="form-group">
-								<label for="post_image">Post Image</label>
-								<p><img src="../images/<?php echo $post_image_current; ?>" width="190em" /></p>
-								<input type="file"  name="post_image">
-							</div>
-
-							<div class="form-group">
-								<label for="post_tags">Post Tags</label>
-								<input type="text" class="form-control" name="post_tags" value="<?php echo $post_tags; ?>">
-							</div>
-
-							<div class="form-group">
-								<input class="btn btn-primary" type="submit" name="update_post" value="Update Post">
+								<input class="btn btn-primary" type="submit" name="update_users" value="Update">
 							</div>
 
 

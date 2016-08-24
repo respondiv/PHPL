@@ -25,13 +25,13 @@
                         <a href="javascript:;" data-toggle="collapse" data-target="#users"><i class="fa fa-fw fa-users"></i> Users <i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="users" class="collapse">
                             <li>
-                                <a href="#"><i class="fa fa-fw fa-search"></i> View All Users</a>
+                                <a href="users.php"><i class="fa fa-fw fa-search"></i> View All Users</a>
                             </li>
                             <li>
-                                <a href="#"><i class="fa fa-fw fa-pencil"></i> Add New User</a>
+                                <a href="users.php?source=add_users"><i class="fa fa-fw fa-pencil"></i> Add New User</a>
                             </li>
                             <li>
-                                <a href="#"><i class="fa fa-fw fa-user"></i> My Proflie</a>
+                                <a href="posts.php?source=my_profile"><i class="fa fa-fw fa-user"></i> My Proflie</a>
                             </li>
                         </ul>
                     </li>                

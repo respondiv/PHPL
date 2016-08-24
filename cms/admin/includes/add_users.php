@@ -1,34 +1,49 @@
-						<?php addPosts();       //Add posts ?>
+						<?php addUsers();       //Add posts ?>
 						<h3 class="page-header">
-                            Add Posts:
-                            <small> Here you can Add new Posts</small>
+                            Add Users:
+                            <small> Here you can Add new Users</small>
                         </h3>
-						<!-- Form to Add Post -->
+						<!-- Form to Add Users -->
                         <form action="" method="post" enctype="multipart/form-data">    
      
 							<div class="form-group">
-								<label for="post_status">Post Status</label>
-								<select name="post_status" id="">
-									<option value="draft">Draft</option>
-									<option value="published">Published</option>
+								<label for="user_status">User Status</label>
+								<select name="user_status" id="">
+									<option value="approved">Approve</option>
+									<option value="declined">Decline</option>
 								</select>
 							</div>
 
 							<div class="form-group">
-								<label for="post_title">Post Title</label>
-								<input type="text" class="form-control" name="post_title">
+								<label for="username">User Name</label>
+								<input type="text" class="form-control" name="username">
 							</div>
 
 							<div class="form-group">
-								<label for="post_content">Post Content</label>
-								<textarea class="form-control" name="post_content" id="" cols="30" rows="10">
-								</textarea>
+								<label for="password">Password</label>
+								<input type="password" class="form-control" name="password">
 							</div>
 
 							<div class="form-group">
-								<label for="post_category_id">Post Category</label>
-								<select name="post_category_id" id="">
-									<?php selectCategories(); ?>
+								<label for="user_firstname">First Name</label>
+								<input type="text" class="form-control" name="user_firstname">
+							</div>
+
+							<div class="form-group">
+								<label for="user_lastname">Last Name</label>
+								<input type="text" class="form-control" name="user_lastname">
+							</div>
+
+							<div class="form-group">
+								<label for="user_email">Email</label>
+								<input type="email" class="form-control" name="user_email">
+							</div>
+
+							<div class="form-group">
+								<label for="user_role">Role</label>
+								<select name="user_role" id="">
+									<option value="admin"> Admin</option>
+									<option value="subscriber"> Subscriber</option>
 								</select>
 							</div>
 							
@@ -42,27 +57,12 @@
 							</div> -->
 
 							<div class="form-group">
-								<label for="post_author">Post Author</label>
-								<input type="text" class="form-control" name="post_author">
+								<label for="user_image">User Image</label>
+								<input type="file"  name="user_image">
 							</div>
 
 							<div class="form-group">
-								<label for="post_date">Post Date</label>
-								<input type="date" class="form-control" name="post_date">
-							</div>
-
-							<div class="form-group">
-								<label for="post_image">Post Image</label>
-								<input type="file"  name="post_image">
-							</div>
-
-							<div class="form-group">
-								<label for="post_tags">Post Tags</label>
-								<input type="text" class="form-control" name="post_tags">
-							</div>
-
-							<div class="form-group">
-								<input class="btn btn-primary" type="submit" name="create_post" value="Publish Post">
+								<input class="btn btn-primary" type="submit" name="create_users" value="Add User">
 							</div>
 
 

@@ -432,7 +432,7 @@
     }
 
 
- // Display different CRUD pages / forms in posts.php depending upon user's interaction
+    // Display different CRUD pages / forms in comments.php depending upon user's interaction
     function diffCrudInComments(){
 
         //  get the value from URL to check what user's want to do
@@ -455,9 +455,8 @@
                 include "includes/view_all_comments.php";      // Include view_all_comments by default
                 break;
         }
-
-
     }
+
 
     // Return Post Title when Post ID is provided
     function PostNameFromID($post_id){
@@ -475,7 +474,7 @@
 
     }
 
-    // Query all the posts
+    // Query all the comments
     function queryAllComments(){
         global $connection;
         $query = "SELECT * FROM comments ";
@@ -708,6 +707,264 @@
         }
 
     }
+
+
+    // Query all the users
+    function queryAllUsers(){
+        global $connection;
+        $query = "SELECT * FROM users";
+        $select_all_users = mysqli_query($connection,$query);
+
+        querryCheck($select_all_users);
+
+        while($row = mysqli_fetch_assoc($select_all_users)){
+            $user_id = $row['user_id']; 
+            $username = $row['username']; 
+            $password = $row['password']; 
+            $user_firstname = $row['user_firstname']; 
+            $user_lastname = $row['user_lastname']; 
+            $user_image = $row['user_image']; 
+            $user_email = $row['user_email']; 
+            $user_role = $row['user_role'];
+            $user_status = $row['user_status'];
+            $user_randSalt = $row['user_randSalt'];
+
+            
+            $rows[] = compact('user_id','username','password','user_firstname','user_lastname','user_image','user_email','user_role','user_status','user_randSalt');
+            
+        }
+            if (empty($rows)) {     // return empty array if no results found
+                $rows = array ();
+            }
+
+            return $rows;       
+     }
+
+
+    // View All Users
+    function viewUsers(){
+         $new_array = queryAllUsers();
+
+        if (empty($new_array)) {
+            echo "<div class='alert alert-danger'>";
+            echo "<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>";
+            echo "No Users Found. Try adding some users first !!";
+            echo "</div>";
+        }
+        else{
+            $new_array = arraySort($new_array, 'user_firstname', SORT_ASC);
+            foreach ($new_array as $key => $value) {
+                echo "<tr>";
+                echo "<td class='hide-m'>{$value['user_id']}</td>";
+                echo "<td>{$value['username']}</td>";
+                echo "<td class='hide-m'>{$value['user_firstname']}</td>";
+                echo "<td class='hide-m'>{$value['user_lastname']}</td>";
+                echo "<td>{$value['user_email']}</td>";
+                echo "<td class='hide-m'>{$value['user_role']}</td>";
+                echo "<td class='hide-m'>{$value['user_status']}</td>";
+                echo "<td><a href='users.php?source=edit_users&user_id={$value['user_id']}'> Edit</a> | ";
+                if ($value["user_status"] == "approved") {
+                    echo "<a href='users.php?decline={$value['user_id']}'> Decline </a> | ";
+                }
+                else{
+                    echo "<a href='users.php?approve={$value['user_id']}'> Approve </a> | ";
+                }
+                echo "<a href='users.php?delete={$value['user_id']}'> Delete </a></td>";
+                echo "</tr>";
+            }
+        }
+    }
+
+    // Add New Users
+    function addUsers(){
+        global $connection;
+        if (isset($_POST['create_users'])) {
+            $username = $_POST['username']; 
+            $password = $_POST['password']; 
+            $user_firstname = $_POST['user_firstname']; 
+            $user_lastname = $_POST['user_lastname']; 
+            $user_email = $_POST['user_email']; 
+            $user_role = $_POST['user_role'];
+            $user_status = $_POST['user_status'];
+            // $user_randSalt = $_POST['user_randSalt'];
+            $user_randSalt = 0;
+            $user_image = basename($_FILES['user_image']['name']);
+            $user_image_temp = $_FILES['user_image']['tmp_name'];
+
+           // move uploaded file from temp location to images folder of CMS
+           move_uploaded_file($user_image_temp, "images/users/{$user_image}");
+
+         
+           $query = "INSERT INTO users(username, password, user_firstname, user_lastname, user_image, user_email, user_role, user_status,user_randSalt ) ";
+           $query .= "VALUES('{$username}','{$password}','{$user_firstname}','{$user_lastname}','{$user_image}','{$user_email}','{$user_role}','{$user_status}',{$user_randSalt}) ";
+
+
+           //  $query = "INSERT INTO posts(post_category_id, post_title, post_author, post_date, post_image, post_content, post_tags, post_status, post_comment_count) ";
+           // $query .= "VALUES('{$post_title}', '{$post_author}', '{$post_date}', '{$post_image}', '{$post_content}', '{$post_tags}', '{$post_status}') ";
+
+
+           $add_new_user = mysqli_query($connection,$query);
+
+           // Check if the query is good
+           querryCheck($add_new_user);
+
+           $user_id = mysqli_insert_id($connection);
+
+           header("Location: users.php?source=edit_users&user_id={$user_id}");
+
+        }
+    }
+
+    // Edit users: Step 1 - Display the existing users inside the input fields
+    function editUsersStep1(){
+        global $connection;
+        if (isset($_GET['user_id'])) {
+            $user_id_update = $_GET['user_id'];
+            $query = "SELECT * FROM users WHERE user_id = $user_id_update ";
+            $edit_user = mysqli_query($connection, $query);
+
+            // Check if the query is good
+            querryCheck($edit_user);
+
+            while($row = mysqli_fetch_assoc($edit_user)){
+                $user_id = $row['user_id']; 
+                $username = $row['username']; 
+                $password = $row['password']; 
+                $user_firstname = $row['user_firstname']; 
+                $user_lastname = $row['user_lastname']; 
+                $user_image = $row['user_image']; 
+                $user_email = $row['user_email']; 
+                $user_role = $row['user_role'];
+                $user_status = $row['user_status'];
+                $user_randSalt = $row['user_randSalt'];
+                return compact('user_id','username','password','user_firstname','user_lastname','user_image','user_email','user_role','user_status','user_randSalt');                              
+            }
+        }
+
+    }
+
+    // Step 2: Update the entered comment content when Update button is pressed
+    function editUsersStep2(){
+        global $connection;
+
+        $get_val = editUsersStep1();
+        $user_id = $get_val['user_id'];
+        $user_image_current = $get_val['user_image'];
+       
+        if (isset($_POST['update_users'])) {
+            $username = $_POST['username']; 
+            $password = $_POST['password']; 
+            $user_firstname = $_POST['user_firstname']; 
+            $user_lastname = $_POST['user_lastname']; 
+            $user_email = $_POST['user_email']; 
+            $user_role = $_POST['user_role'];
+            $user_status = $_POST['user_status'];
+            // $user_randSalt = $_POST['user_randSalt'];
+            $user_image = basename($_FILES['user_image']['name']);
+            $user_image_temp = $_FILES['user_image']['tmp_name'];
+
+            if ($user_image_temp = "" || empty($user_image_temp)) {
+                $user_image = $user_image_current; 
+            }else{
+                $user_image = $user_image;
+            }
+
+            // move uploaded file from temp location to images folder of CMS
+            move_uploaded_file($user_image_temp, "/images/users/{$user_image}");
+
+            $query = "UPDATE users SET ";
+            $query .= "username = '{$username}', ";
+            $query .= "password = '{$password}', ";
+            $query .= "user_firstname = '{$user_firstname}', ";
+            $query .= "user_lastname = '{$user_lastname}', ";
+            $query .= "user_email = '{$user_email}', ";
+            $query .= "user_role = '{$user_role}', ";
+            $query .=  "user_status = '{$user_status}', ";
+            $query .=  "user_image = '{$user_image}' ";
+            $query .= "WHERE user_id = {$user_id} ";
+
+            $update_user = mysqli_query($connection, $query);
+            // Check if the query is good
+            querryCheck($update_user);
+
+            header("Location: users.php?source=edit_users&user_id={$user_id}");
+        }
+    }
+
+    // Delete Users
+    function deleteUsers(){
+        global $connection;
+        if (isset($_GET['delete'])) {
+            $delete_user_id = $_GET['delete'];
+            $query = "DELETE FROM users WHERE user_id = {$delete_user_id} ";
+            $delete_selected_user = mysqli_query($connection,$query);
+            // Check if the query is good
+           querryCheck($delete_selected_user);
+           header("Location: users.php");
+
+        }
+    }
+
+    // Approve / Decline users
+
+    function approveDeclineUsers(){
+        global $connection;
+        // Decline Selected users
+        if (isset($_GET['decline'])) {
+            
+            $user_id_decline = $_GET['decline'];
+            $query = "UPDATE users SET user_status = 'declined' WHERE user_id = {$user_id_decline}";
+            $decline_user = mysqli_query($connection, $query);
+            // Check if the query is good
+            querryCheck($decline_user);
+
+            header("Location: users.php");
+        }
+
+        // Approve Selected users
+        if (isset($_GET['approve'])) {
+            
+            $user_id_approve = $_GET['approve'];
+            $query = "UPDATE users SET user_status = 'approved' WHERE user_id = {$user_id_approve}";
+            $approve_user = mysqli_query($connection, $query);
+            // Check if the query is good
+            querryCheck($approve_user);
+
+            header("Location: users.php");
+        }
+
+    }
+
+
+    // Display different CRUD pages / forms in users.php depending upon user's interaction
+    function diffCrudInUsers(){
+
+        //  get the value from URL to check what user's want to do
+        if (isset($_GET['source'])) {
+            $source = $_GET['source'];
+        }
+        else{
+            $source = "";
+        }
+
+        // Check various Case and display the correct CRUD page request 
+
+        switch ($source) {
+            case 'add_users':
+                include "includes/add_users.php";      // Include edit_users
+                break;
+
+            case 'edit_users':
+                include "includes/edit_users.php";      // Include edit_users
+                break;
+            
+            default:
+                include "includes/view_all_users.php";      // Include view_all_users by default
+                break;
+        }
+    }
+
+
 
 
 ?>
