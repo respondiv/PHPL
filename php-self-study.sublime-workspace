@@ -4,56 +4,116 @@
 		"selected_items":
 		[
 			[
-				"se",
-				"select	Tag"
+				"pass",
+				"password"
 			],
 			[
-				"t",
-				"tbody	Tag"
+				"show",
+				"showAllData"
+			],
+			[
+				"sho",
+				"showAllData"
+			],
+			[
+				"inc",
+				"include"
 			],
 			[
 				"for",
 				"foreach	foreach …"
 			],
 			[
-				"mysqli",
-				"mysqli_fetch"
-			],
-			[
-				"MYSQ",
-				"mysql_error"
-			],
-			[
 				"user",
 				"username"
 			],
 			[
-				"passw",
-				"password"
+				"con",
+				"convert"
 			],
 			[
-				"su",
-				"submit"
+				"add",
+				"addNumbers"
 			],
 			[
-				"in",
-				"input	Tag"
+				"val",
+				"value2"
+			],
+			[
+				"value",
+				"value1"
+			],
+			[
+				"valu",
+				"value2"
+			],
+			[
+				"va",
+				"value2"
+			],
+			[
+				"th",
+				"threeDivisible"
+			],
+			[
+				"calc",
+				"calculate"
+			],
+			[
+				"Func",
+				"function"
 			],
 			[
 				"fo",
-				"form	Tag"
+				"fourSquare"
 			],
 			[
-				"arrays",
-				"array_sum"
+				"tq",
+				"twoSquare"
 			],
 			[
-				"pri",
+				"co",
+				"counter"
+			],
+			[
+				"whil",
+				"while	while …"
+			],
+			[
+				"while",
+				"While"
+			],
+			[
+				"sec",
+				"secondCustomer"
+			],
+			[
+				"name",
+				"nameListRegular"
+			],
+			[
+				"nam",
+				"nameList"
+			],
+			[
+				"nu",
+				"number2"
+			],
+			[
+				"num",
+				"number1"
+			],
+			[
+				"print",
 				"print_r"
 			],
 			[
-				"strto",
-				"strtoupper"
+				"city",
+				"cityName"
+			],
+			[
+				"n",
+				"number"
 			],
 			[
 				"ma",
@@ -67,6 +127,17 @@
 	},
 	"buffers":
 	[
+		{
+			"contents": " n <?php\n\n	/* *******************************************************\n	Code to read / pull all info from users table of DB\n	*********************************************************/\n\n		global $connection;\n\n		// adding query into variable so it's easy to read and manage\n		$query = \"SELECT * FROM users\";\n		$result = mysqli_query($connection,$query);\n\n		if (!$result) {\n			die(\"Query FAILED \" . mysqli_error($connection));\n		}\n\n		// Store all data from SQL to Array: this contain arrays within array\n\n		$rows = array();\n\n		while ($row = mysqli_fetch_assoc($result)) {\n			$rows[] = $row;\n		}\n\n\n	/* *******************************************************\n		Function to Print ID's of User as select Options\n	*********************************************************/\n	function printId(){\n		global $rows;\n		foreach ($rows as $keys => $values) {\n			$id = $values['id'];\n			echo \"<option value='$id'>$id</option>\";\n		}\n	}\n\n\n	/* *******************************************************\n		Function to list all users as table\n	*********************************************************/\n	function listAllUsers(){\n		global $rows;\n		// rows contain arrays within array (whole table) | $values will contain 1 array at a time (1 row within table)\n		foreach ($rows as $keys => $values) { \n			echo \"<tr>\";\n			//$values will contain 1 array at a time (1 row within table) | $value contain data for each column within row at a time\n			foreach ($values as $key => $value) {\n					echo \"<td>\" . $value . \"</td>\";\n			}\n			echo \"</tr>\";\n		}\n	}\n\n	/* *******************************************************\n		Function to update the user's username and password\n	*********************************************************/\n	function updateUsers(){\n		global $connection;\n		global $username;\n		global $password;\n		$username = $_POST['username'];\n		$password = $_POST['password'];\n		$userid = $_POST['id'];\n\n		// call encrypt function\n		passEncrypt();\n\n\n		$updateQuery = \"UPDATE users SET \";\n		$updateQuery .= \"username = '$username', \";\n		$updateQuery .= \"password = '$password' \";\n		$updateQuery .= \"WHERE	id = $userid \";\n\n		$updateResult = mysqli_query($connection,$updateQuery); \n\n		if(!$updateResult){\n			die(\"QUERY FAILED\" . mysqli_error($connection));\n		}\n\n		header(\"Location: http://demo.dev/mysql/login_delete.php\");\n	}\n\n\n	/* *******************************************************\n		Function to add the user with username and password\n	*********************************************************/\n	function addUsers(){\n		global $connection;\n		global $username;\n		global $password;\n		$username = $_POST['username'];\n		$password = $_POST['password'];\n\n		// call encrypt function\n		passEncrypt();\n\n		// adding query into variable so it's easy to read and manage\n		$query = \"INSERT INTO users(username,password) \";\n		$query .= \"VALUES ('$username','$password')\";\n\n\n		$addResult = mysqli_query($connection,$query);\n\n		if(!$addResult){\n			die(\"QUERY FAILED\" . mysqli_error($connection));\n		}\n\n		header(\"Location: http://demo.dev/mysql/login_delete.php\");\n	}\n\n	/* *******************************************************\n		Function to delete the user's from user table\n	*********************************************************/\n	function deleteUsers(){\n		global $connection;\n\n		$userid = $_POST['id'];\n\n		$deleteQuery = \"DELETE FROM users \";\n		$deleteQuery .= \"WHERE	id = $userid \";\n\n		$deleteResult = mysqli_query($connection,$deleteQuery); \n\n		if(!$deleteResult){\n			die(\"QUERY FAILED\" . mysqli_error($connection));\n		}\n\n		header(\"Location: http://demo.dev/mysql/login_delete.php\");\n	}\n\n		/* *******************************************************\n			Function to encrypt password and prevent mysql injection\n		*********************************************************/\n		function passEncrypt(){\n			global $connection;\n			global $username;\n			global $password;\n			/* 	mysqli_real_escape_string will treat the enter data as regular string including '' or \"\" \n				so when user enter's it, it won't throw any error and accept them as it is.\n				This will preven sql injection because SQL queries (Statement) contains those character as command but\n				they are now treated as regular text input.\n			*/\n			$username = mysqli_real_escape_string($connection,$username);\n			$password = mysqli_real_escape_string($connection,$password);\n\n			// encrypting password\n			$hashFormat	= \"$2y$10$\";\n			$salt = \"thisisveryrandomcrazys\";\n			$hash_and_salt = $hashFormat . $salt;\n\n			$password = crypt($password,$hash_and_salt);\n\n		}\n\n?>",
+			"file": "demo/mysql/functions.php",
+			"file_size": 4641,
+			"file_write_time": 131165343923234895,
+			"settings":
+			{
+				"buffer_size": 4490,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -82,6 +153,10 @@
 			[
 				"ins",
 				"Package Control: Install Package"
+			],
+			[
+				"ssphp",
+				"Set Syntax: PHP"
 			],
 			[
 				"install",
@@ -100,7 +175,7 @@
 				"Preferences: Browse Packages"
 			]
 		],
-		"width": 432.0
+		"width": 400.0
 	},
 	"console":
 	{
@@ -121,39 +196,54 @@
 	},
 	"expanded_folders":
 	[
-		"/F/laragon/Projects/PHPL",
-		"/F/laragon/Projects/PHPL/demo",
-		"/F/laragon/Projects/PHPL/demo/mysql"
+		"/C/laragon/Projects/PHPL",
+		"/C/laragon/Projects/PHPL/demo",
+		"/C/laragon/Projects/PHPL/demodl",
+		"/C/laragon/Projects/PHPL/demodl/_practical-app"
 	],
 	"file_history":
 	[
-		"/F/laragon/Projects/PHPL/demodl/_practical-app/7.php",
-		"/F/laragon/Projects/PHPL/demo/mysql/db.php",
-		"/F/laragon/Projects/PHPL/demo/mysql/login_update.php",
-		"/F/laragon/Projects/PHPL/demo/mysql/login_read.php",
-		"/F/laragon/Projects/PHPL/demo/mysql/login_create.php",
-		"/F/laragon/Projects/PHPL/demo/mysql/login_read_v1.php",
-		"/F/laragon/Projects/PHPL/demo/mysql/login.php",
-		"/F/laragon/Projects/PHPL/demo/form_external_submission.php",
-		"/F/laragon/Projects/PHPL/demo/form_process.php",
-		"/F/laragon/Projects/PHPL/demodl/_practical-app/6.php",
-		"/F/laragon/Projects/PHPL/demodl/_practical-app/5.php",
-		"/F/laragon/Projects/PHPL/demo/predefined_array_functions.php",
-		"/F/laragon/Projects/PHPL/demo/predefined_string_functions.php",
-		"/F/laragon/Projects/PHPL/demo/string_functions.php",
-		"/F/laragon/Projects/PHPL/demo/predefined_math_finctions.php",
+		"/C/laragon/Projects/PHPL/demo/mysql/functions.php",
+		"/C/laragon/Projects/PHPL/demo/mysql/login_create.php",
+		"/C/laragon/Projects/PHPL/demo/mysql/includes/footer.php",
+		"/C/laragon/Projects/PHPL/demo/mysql/includes/header.php",
+		"/C/laragon/Projects/PHPL/demo/mysql/login_delete.php",
+		"/C/laragon/Projects/PHPL/demo/mysql/login.php",
+		"/C/laragon/Projects/PHPL/demo/mysql/login_update_without_functions.php",
+		"/C/laragon/Projects/PHPL/demo/mysql/db.php",
+		"/C/laragon/Projects/PHPL/demo/functions.php",
+		"/C/laragon/Projects/PHPL/demo/mysql/login_update.php",
+		"/C/laragon/Projects/PHPL/demo/associated_arrays.php",
+		"/C/laragon/Projects/PHPL/demo/function_return_value.php",
+		"/C/laragon/Projects/PHPL/demodl/_practical-app/4.php",
+		"/C/laragon/Projects/PHPL/demo/functions_parameter.php",
+		"/C/laragon/Projects/PHPL/demo/constants.php",
+		"/C/laragon/Projects/PHPL/demo/global_variable_scope.php",
+		"/C/laragon/Projects/PHPL/demodl/_practical-app/3.php",
+		"/C/laragon/Projects/PHPL/demo/for_each_loop.php",
+		"/C/laragon/Projects/PHPL/demo/switch_statement.php",
+		"/C/laragon/Projects/PHPL/demo/arrays.php",
+		"/C/laragon/Projects/PHPL/demo/math.php",
+		"/C/laragon/Projects/PHPL/demo/for_loop.php",
+		"/C/laragon/Projects/PHPL/demo/forloop.php",
+		"/C/laragon/Projects/PHPL/demo/whileloop.php",
+		"/C/laragon/Projects/PHPL/demo/switchstatement.php",
+		"/C/laragon/Projects/PHPL/demo/comparision_logical_operator.php",
+		"/C/laragon/Projects/PHPL/demo/ifstatement.php",
+		"/C/laragon/Projects/PHPL/demodl/_practical-app/2.php",
+		"/C/laragon/Projects/PHPL/demo/blank.php",
+		"/C/laragon/Projects/PHPL/demo/variables.php",
+		"/C/Users/sprasai/Documents/Dropbox/config.inc.php",
+		"/C/laragon/Projects/PHPL/demodl/_practical-app/1.php",
+		"/C/laragon/Projects/PHPL/demo/comments.php",
 		"/C/Users/sushi/AppData/Roaming/Sublime Text 3/Packages/User/Preview.sublime-settings",
-		"/F/laragon/Projects/PHPL/php-self-study.sublime-project",
-		"/F/laragon/Projects/PHPL/php-self-study.sublime-workspace",
-		"/F/laragon/Projects/PHPL/.gitignore",
 		"/F/laragon/Projects/PHPL/demo/comments.php",
-		"/F/laragon/Projects/PHPL/demodl/_practical-app/1.php",
-		"/F/laragon/Projects/PHPL/README.md",
 		"/F/laragon/Projects/PHPL/demo/dynamic_text.php",
 		"/F/laragon/Projects/PHPL/demodl/_blank.php",
 		"/C/Users/sushi/AppData/Roaming/Sublime Text 3/Settings/SideBarEnhancements.json",
 		"/C/Users/sushi/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
 		"/C/Users/sushi/AppData/Roaming/Sublime Text 3/Packages/SideBarEnhancements/Side Bar.sublime-settings",
+		"/F/laragon/Projects/PHPL/php-self-study.sublime-project",
 		"/F/laragon/Projects/PHPL/demo/embed.php",
 		"/F/laragon/www/index.php",
 		"/C/Users/sushi/Desktop/pen drive/ESD-USB/key.txt",
@@ -240,19 +330,11 @@
 		"/C/Users/sushi/Downloads/mailchimp-for-wp.2.3.8/mailchimp-for-wp/mailchimp-for-wp.php",
 		"/C/Users/sushi/Downloads/mailchimp-for-wp.2.3.8/mailchimp-for-wp/includes/functions/general.php",
 		"/C/Users/sushi/Downloads/mailchimp-for-wp.2.3.8/mailchimp-for-wp/includes/functions/template.php",
-		"/C/Users/sushi/Downloads/searchform.php",
-		"/F/wamp/www/hp/wp-config.php",
-		"/C/Users/sushi/Desktop/HBP/SSL/happybiopharma_com.combined.crt",
-		"/C/Users/sushi/Desktop/HBP/SSL/AddTrustExternalCARoot.crt",
-		"/C/Users/sushi/Desktop/HBP/SSL/COMODORSAAddTrustCA.crt",
-		"/C/Users/sushi/Desktop/HBP/SSL/COMODORSADomainValidationSecureServerCA.crt",
-		"/C/Users/sushi/Desktop/HBP/SSL/happybiopharma.com.oir.key",
-		"/C/Users/sushi/Desktop/HBP/SSL/happybiopharma.com.key",
-		"/C/Users/sushi/Desktop/HBP/SSL/passphrase.txt"
+		"/C/Users/sushi/Downloads/searchform.php"
 	],
 	"find":
 	{
-		"height": 23.0
+		"height": 34.0
 	},
 	"find_in_files":
 	{
@@ -266,7 +348,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"\");\n",
+			");\n",
+			"update",
+			"value",
+			"];\n",
+			"echo \"<br>\";",
 			"git config --global core.autocrlf true",
 			"example",
 			"desc",
@@ -286,6 +372,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"delete",
 			"canadapurenutrition",
 			"nutrix_world",
 			"happybiopharma.com"
@@ -299,8 +386,38 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "demo/mysql/functions.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4490,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3,
+								3
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -343,7 +460,7 @@
 	"project": "php-self-study.sublime-project",
 	"replace":
 	{
-		"height": 42.0
+		"height": 86.0
 	},
 	"save_all_on_build": true,
 	"select_file":

@@ -12,7 +12,7 @@
 			'PHPlearn',
 			'phpl'
 			);
-		if($connection){
+		if(!$connection){
 			echo "We are connected";
 		}
 		else{

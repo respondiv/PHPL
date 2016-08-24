@@ -1,16 +1,24 @@
-<?php include "db.php"; ?>
-<?php include "functions.php"; ?>
 <?php
 
-if (isset($_POST['update'])) {
-	updateUsers();
-}
-if (isset($_POST['add'])) {
-	addUsers();
-}
+	include "db.php";
+
+	// adding query into variable so it's easy to read and manage
+	$query = "SELECT * FROM users";
+	$result = mysqli_query($connection,$query);
+
+	if (!$result) {
+		die("Query FAILED " . mysqli_error());
+	}
+
+
+	// Store all data from SQL to Array: this contain arrays within array
+	$rows = array();
+
+	while ($row = mysqli_fetch_assoc($result)) {
+		$rows[] = $row;
+	}
 
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,7 +49,27 @@ if (isset($_POST['add'])) {
 			</thead>
 			<tbody>
 				<?php
-					listAllUsers();
+							// rows contain arrays within array (whole table) | $values will contain 1 array at a time (1 row within table)
+							foreach ($rows as $keys => $values) { 
+				?>
+							<tr>
+				<?php
+								//$values will contain 1 array at a time (1 row within table) | $value contain data for each column within row at a time
+								foreach ($values as $key => $value) {
+				?>
+								
+									<td>
+				<?php
+										echo($value);
+				?>
+									</td>
+				<?php
+								}
+				?>
+						</tr>
+				<?php
+							}
+
 				?>
 			</tbody>
 		</table>
@@ -50,7 +78,7 @@ if (isset($_POST['add'])) {
 
 <div class="container offset1">
 	<div class="col-m-6">
-		<h4> DB User Add / Update / Delete Form </h4>
+		<h4> DB User Update Form </h4>
 	</div>
 </div>
 
@@ -67,15 +95,18 @@ if (isset($_POST['add'])) {
 			</div>	
 			<div class="form-group">
 				<select name="id" id = "">
-					<option value="" disabled selected>Select Users ID </option>
+
 					<?php
-						printId();
+						foreach ($rows as $keys => $values) {
+								$id = $values['id'];
+								echo "<option value='$id'>$id</option>";
+
+						}
 					?>
-				</select> *only required when updating users
+				</select>
 			</div>	
 
-			<input type="submit" class="btn btn-primary" name="update" value="UPDATE">
-			<input type="submit" class="btn btn-primary" name="add" value="ADD USER">		
+			<input type="submit" class="btn btn-primary" name="submit" value="UPDATE">	
 
 		</form>
 
