@@ -12,12 +12,7 @@
             <!-- Blog Entries Column -->
             <div class="col-md-8">
 
-                <h1 class="page-header">
-                    My First CMS
-                    <small>Fully Custom Made</small>
-                </h1>
-
-                <?php displayAllPosts();               // Display ALl Posts ?> 
+                <?php displayPostsInCategory();               // Display All Posts in Category ?> 
 
             </div>
             

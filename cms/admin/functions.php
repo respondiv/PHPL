@@ -114,46 +114,68 @@
 
     }
 
-
-    // View All Posts
-    function viewPosts(){
+    // Query all the posts
+    function queryAllPosts(){
         global $connection;
         $query = "SELECT * FROM posts";
         $select_all_posts = mysqli_query($connection,$query);
 
-        // Check if the query is good
         querryCheck($select_all_posts);
 
         while($row = mysqli_fetch_assoc($select_all_posts)){
             $post_id = $row['post_id']; 
-            $post_title = $row['post_title'];
+            $post_category_id = $row['post_category_id']; 
+            $post_title = $row['post_title']; 
             $post_author = $row['post_author']; 
-            $post_category_id = $row['post_category_id'];
+            $post_date = $row['post_date']; 
             $post_image = $row['post_image']; 
-            $post_content = $row['post_content'];
+            $post_content = $row['post_content']; 
             $post_content = mb_substr($post_content, 0, 25);
-            $post_tags = $row['post_tags']; 
-            $post_date = $row['post_date'];
-            $post_status = $row['post_status']; 
+            $post_tags = $row['post_tags'];
+            $post_status = $row['post_status'];
             $post_comment_count = $row['post_comment_count'];
+            $post_category_name = categoryName($post_category_id);
 
-            $category_name = categoryName($post_category_id);
-
-            echo "<tr>";
-            echo "<td class='hide-m'>{$post_id}</td>";
-            echo "<td>{$post_title}</td>";
-            echo "<td>{$post_author}</td>";
-            echo "<td class='hide-m'>{$category_name}</td>";
-            echo "<td class='hide-m'><img src='../images/{$post_image}' width='90em'></td>";
-            echo "<td class='hide-m'>{$post_content}...</td>";
-            echo "<td class='hide-m'>{$post_tags}</td>";
-            echo "<td class='hide-m'>{$post_date}</td>";
-            echo "<td>{$post_status}</td>";
-            echo "<td class='hide-m'>{$post_comment_count}</td>";
-            echo "<td><a href='posts.php?source=edit_post&post_id={$post_id}'> Edit</a> | ";
-            echo "<a href='posts.php?delete={$post_id}'> Delete </a></td>";
             
-            echo "</tr>";
+            $rows[] = compact('post_id','post_status','post_title','post_content','post_category_id','post_author','post_tags','post_image','post_date','post_comment_count','post_category_name');
+            
+        }
+            if (empty($rows)) {     // return empty array if no results found
+                $rows = array ();
+            }
+
+            return $rows;       
+     }
+
+
+    // View All Posts
+    function viewPosts(){
+         $new_array = queryAllPosts();
+
+        if (empty($new_array)) {
+            echo "<div class='alert alert-danger'>";
+            echo "<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>";
+            echo "No Posts Found. Try adding some posts first !!";
+            echo "</div>";
+        }
+        else{
+            $new_array = arraySort($new_array, 'post_date', SORT_DESC);
+            foreach ($new_array as $key => $value) {
+                echo "<tr>";
+                echo "<td class='hide-m'>{$value['post_id']}</td>";
+                echo "<td>{$value['post_title']}</td>";
+                echo "<td>{$value['post_author']}</td>";
+                echo "<td class='hide-m'>{$value['post_category_name']}</td>";
+                echo "<td class='hide-m'><img src='../images/{$value['post_image']}' width='90em'></td>";
+                echo "<td class='hide-m'>{$value['post_content']}...</td>";
+                echo "<td class='hide-m'>{$value['post_tags']}</td>";
+                echo "<td class='hide-m'>{$value['post_date']}</td>";
+                echo "<td>{$value['post_status']}</td>";
+                echo "<td class='hide-m'>{$value['post_comment_count']}</td>";
+                echo "<td><a href='posts.php?source=edit_post&post_id={$value['post_id']}'> Edit</a> | ";
+                echo "<a href='posts.php?delete={$value['post_id']}'> Delete </a></td>";
+                echo "</tr>";
+            }
         }
     }
 
@@ -172,7 +194,7 @@
            $post_image_temp = $_FILES['post_image']['tmp_name'];
            $post_date_if_empty = date('d-m-y');               // this format's the date into MySQL acceptable format
            $post_date = $_POST['post_date'];            
-           $post_comment_count = 4;
+           $post_comment_count = 0;
 
            // move uploaded file from temp location to images folder of CMS
            move_uploaded_file($post_image_temp, "../images/{$post_image}");
@@ -374,6 +396,40 @@
     }
 
 
+    // Sort Array
+    function arraySort($array, $on, $order=SORT_ASC){
+        $new_array = array();
+        $sortable_array = array();
+
+        if (count($array) > 0) {
+            foreach ($array as $k => $v) {
+                if (is_array($v)) {
+                    foreach ($v as $k2 => $v2) {
+                        if ($k2 == $on) {
+                            $sortable_array[$k] = $v2;
+                        }
+                    }
+                } else {
+                $sortable_array[$k] = $v;
+                }
+            }
+
+            switch ($order) {
+                case SORT_ASC:
+                    asort($sortable_array);
+                break;
+                case SORT_DESC:
+                    arsort($sortable_array);
+                break;
+            }
+
+            foreach ($sortable_array as $k => $v) {
+                $new_array[$k] = $array[$k];
+            }
+        }
+
+        return $new_array;
+    }
 
 
 

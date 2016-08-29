@@ -13,7 +13,7 @@
                                     <th class='hide-m'>Image</th>
                                     <th class='hide-m'>Post Excerpt</th>
                                     <th class='hide-m'>Tags</th>
-                                    <th class='hide-m'>Date</th>
+                                    <th class='hide-m'>Publish Date</th>
                                     <th>Status</th>
                                     <th class='hide-m'>Comments</th>
                                     <th>Action</th>

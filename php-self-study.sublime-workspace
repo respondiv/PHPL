@@ -4,184 +4,180 @@
 		"selected_items":
 		[
 			[
-				"key",
-				"key2"
-			],
-			[
-				"arrays",
-				"arraySort"
-			],
-			[
-				"print",
-				"print_r"
-			],
-			[
-				"cate",
-				"category_name"
-			],
-			[
-				"cat",
-				"category_name"
-			],
-			[
-				"edit",
-				"editPosts"
-			],
-			[
-				"pos",
-				"post_image"
-			],
-			[
-				"post_image_",
-				"post_image_current"
-			],
-			[
-				"sele",
-				"selectCategories"
-			],
-			[
-				"ca",
-				"cat_title"
-			],
-			[
-				"pu_pos",
-				"pu_post_title"
-			],
-			[
-				"pu_post",
-				"pu_post_title"
-			],
-			[
 				"post_c",
-				"post_comment_count"
-			],
-			[
-				"post",
-				"post_id"
-			],
-			[
-				"edi",
-				"edit_post"
-			],
-			[
-				"dele",
-				"delete_post_id"
-			],
-			[
-				"is",
-				"isset"
-			],
-			[
-				"add",
-				"add_new_post"
-			],
-			[
-				"po",
-				"post_date"
-			],
-			[
-				"post_t",
-				"post_title"
-			],
-			[
-				"IN",
-				"INTO"
+				"post_content"
 			],
 			[
 				"post_",
 				"post_image"
 			],
 			[
-				"post_im",
-				"post_image_temp"
+				"pos",
+				"post_author"
 			],
 			[
-				"move",
-				"move_uploaded_file"
-			],
-			[
-				"incl",
-				"include"
-			],
-			[
-				"so",
-				"source"
-			],
-			[
-				"update",
-				"update_category"
-			],
-			[
-				"cat_",
-				"cat_title"
-			],
-			[
-				"mysqli_e",
-				"mysqli_error"
-			],
-			[
-				"con",
+				"c",
 				"connection"
 			],
 			[
-				"mysqli",
-				"mysqli_query"
+				"db_",
+				"db_name"
 			],
 			[
-				"col_",
-				"col_1"
+				"db",
+				"db_password"
 			],
 			[
-				"search",
-				"search_tags"
+				"pu",
+				"public"
 			],
 			[
-				"sea",
-				"search_tags"
+				"whe",
+				"wheelsData"
 			],
 			[
-				"se",
-				"select	Tag"
+				"class",
+				"class_exists"
 			],
 			[
-				"t",
-				"tbody	Tag"
+				"Mo",
+				"MoveWheels"
+			],
+			[
+				"move",
+				"MoveWheels"
+			],
+			[
+				"session_",
+				"session_start"
+			],
+			[
+				"cook",
+				"cookieName"
+			],
+			[
+				"set",
+				"setcookie"
+			],
+			[
+				"sess",
+				"session_start"
+			],
+			[
+				"num",
+				"numberVisits"
+			],
+			[
+				"ex",
+				"expiration"
+			],
+			[
+				"pass",
+				"password"
+			],
+			[
+				"show",
+				"showAllData"
+			],
+			[
+				"sho",
+				"showAllData"
+			],
+			[
+				"inc",
+				"include"
 			],
 			[
 				"for",
 				"foreach	foreach …"
 			],
 			[
-				"MYSQ",
-				"mysql_error"
-			],
-			[
 				"user",
 				"username"
 			],
 			[
-				"passw",
-				"password"
+				"con",
+				"convert"
 			],
 			[
-				"su",
-				"submit"
+				"add",
+				"addNumbers"
 			],
 			[
-				"in",
-				"input	Tag"
+				"val",
+				"value2"
+			],
+			[
+				"value",
+				"value1"
+			],
+			[
+				"valu",
+				"value2"
+			],
+			[
+				"va",
+				"value2"
+			],
+			[
+				"th",
+				"threeDivisible"
+			],
+			[
+				"calc",
+				"calculate"
+			],
+			[
+				"Func",
+				"function"
 			],
 			[
 				"fo",
-				"form	Tag"
+				"fourSquare"
 			],
 			[
-				"pri",
+				"tq",
+				"twoSquare"
+			],
+			[
+				"co",
+				"counter"
+			],
+			[
+				"whil",
+				"while	while …"
+			],
+			[
+				"while",
+				"While"
+			],
+			[
+				"sec",
+				"secondCustomer"
+			],
+			[
+				"name",
+				"nameListRegular"
+			],
+			[
+				"nam",
+				"nameList"
+			],
+			[
+				"nu",
+				"number2"
+			],
+			[
+				"print",
 				"print_r"
 			],
 			[
-				"strto",
-				"strtoupper"
+				"city",
+				"cityName"
+			],
+			[
+				"n",
+				"number"
 			],
 			[
 				"ma",
@@ -195,6 +191,30 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "cms/functions.php",
+			"settings":
+			{
+				"buffer_size": 17561,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "cms/admin/includes/side_nav.php",
+			"settings":
+			{
+				"buffer_size": 2210,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "if (isset($_GET['post_id'])) {\n            $post_id_update = $_GET['post_id'];\n            $query = \"SELECT * FROM posts WHERE post_id = $post_id_update \";\n            $edit_post_by_id = mysqli_query($connection, $query);\n\n            // Check if the query is good\n            querryCheck($edit_post_by_id);\n\n            while($row = mysqli_fetch_assoc($edit_post_by_id)){\n                $post_id = $row['post_id'];\n                $post_status = $row['post_status'];\n                $post_title = $row['post_title'];\n                $post_content = $row['post_content'];\n                $post_category_id = $row['post_category_id'];\n                $post_author = $row['post_author'];\n                $post_tags = $row['post_tags'];\n                $post_image_current = $row['post_image'];\n                $post_date = $row['post_date'];            \n                $post_comment_count = $row['post_comment_count'];\n                return compact('post_id','post_status','post_title','post_content','post_category_id','post_author','post_tags','post_image_current','post_date','post_comment_count');                              \n            }\n        }",
+			"settings":
+			{
+				"buffer_size": 1156,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -203,13 +223,21 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 392.0,
-		"last_filter": "",
+		"height": 288.0,
+		"last_filter": "insta",
 		"selected_items":
 		[
 			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
 				"ins",
 				"Package Control: Install Package"
+			],
+			[
+				"ssphp",
+				"Set Syntax: PHP"
 			],
 			[
 				"install",
@@ -249,85 +277,81 @@
 	},
 	"expanded_folders":
 	[
-		"/F/laragon/Projects/PHPL",
-		"/F/laragon/Projects/PHPL/cms",
-		"/F/laragon/Projects/PHPL/cms/admin",
-		"/F/laragon/Projects/PHPL/cmsdl/admin",
-		"/F/laragon/Projects/PHPL/cmsdl/admin/includes",
-		"/F/laragon/Projects/PHPL/demo"
+		"/C/laragon/Projects/PHPL",
+		"/C/laragon/Projects/PHPL/cms",
+		"/C/laragon/Projects/PHPL/cms/admin",
+		"/C/laragon/Projects/PHPL/cms/admin/includes",
+		"/C/laragon/Projects/PHPL/demo/mysql"
 	],
 	"file_history":
 	[
-		"/F/laragon/Projects/PHPL/cms/admin/functions.php",
-		"/F/laragon/Projects/PHPL/cms/index - Copy.php",
-		"/F/laragon/Projects/PHPL/cms/index.php",
-		"/F/laragon/Projects/PHPL/cms/post.php",
-		"/F/laragon/Projects/PHPL/cms/functions.php",
-		"/F/laragon/Projects/PHPL/demo/mysql/login_read.php",
-		"/F/laragon/Projects/PHPL/demo/mysql/db.php",
-		"/F/laragon/Projects/PHPL/demo/mysql/functions.php",
-		"/F/laragon/Projects/PHPL/cms/includes/comments.php",
-		"/F/laragon/Projects/PHPL/cms/includes/header.php",
-		"/F/laragon/Projects/PHPL/cms/admin/posts.php",
-		"/F/laragon/Projects/PHPL/cms/admin/includes/header.php",
-		"/F/laragon/Projects/PHPL/cms/includes/db.php",
-		"/F/laragon/Projects/PHPL/cms/admin/includes/edit_posts.php",
-		"/F/laragon/Projects/PHPL/cms/admin/includes/add_posts.php",
-		"/F/laragon/Projects/PHPL/cms/admin/includes/edit_posts_bak.php",
-		"/F/laragon/Projects/PHPL/cms/admin/add_post.php",
-		"/F/laragon/Projects/PHPL/cms/admin/categories.php",
-		"/F/laragon/Projects/PHPL/cms/admin/includes/view_all_posts.php",
-		"/F/laragon/Projects/PHPL/cms/admin/css/sb-admin.css",
-		"/F/laragon/Projects/PHPL/cms/admin/includes/side_nav.php",
-		"/F/laragon/Projects/PHPL/demo/mysql/login_update.php",
-		"/F/laragon/Projects/PHPL/cms/admin/includes/update_categories.php",
-		"/F/laragon/Projects/PHPL/cms/admin/includes/footer.php",
-		"/F/laragon/Projects/PHPL/cms/includes/nav.php",
-		"/F/laragon/Projects/PHPL/cms/admin/css/bootstrap.min.css",
-		"/F/laragon/Projects/PHPL/cms/search.php",
-		"/F/laragon/Projects/PHPL/cms/admin/index.php",
-		"/F/laragon/Projects/PHPL/cms/admin/includes/top_nav.php",
-		"/F/laragon/Projects/PHPL/cms/admin/includes/nav.php",
-		"/F/laragon/Projects/PHPL/cms/includes/sidebar.php",
-		"/F/laragon/Projects/PHPL/cms/includes/widget.php",
-		"/F/laragon/Projects/PHPL/cms/includes/sidebar_bak.php",
-		"/F/laragon/Projects/PHPL/cms/search_backup.php",
-		"/C/Users/sushi/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
-		"/C/Users/sushi/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
-		"/C/Users/sushi/AppData/Roaming/Sublime Text 3/Packages/User/Emmet.sublime-settings",
-		"/F/laragon/Projects/PHPL/info.php",
-		"/F/laragon/Projects/PHPL/cmsdl/post.php",
-		"/F/laragon/Projects/PHPL/cmsdl/index.php",
+		"/C/laragon/Projects/PHPL/cms/includes/nav.php",
+		"/C/laragon/Projects/PHPL/cms/admin/includes/view_all_posts.php",
+		"/C/laragon/Projects/PHPL/cms/category.php",
+		"/C/laragon/Projects/PHPL/cms/post.php",
+		"/C/laragon/Projects/PHPL/cms/search.php",
+		"/C/laragon/Projects/PHPL/cms/includes/sidebar.php",
+		"/C/laragon/Projects/PHPL/cms/functions.php",
+		"/C/laragon/Projects/PHPL/cms/includes/db.php",
+		"/C/laragon/Projects/PHPL/cms/index.php",
+		"/C/laragon/Projects/PHPL/cms/includes/header.php",
+		"/C/laragon/Projects/PHPL/cms/includes/footer.php",
+		"/C/Users/sprasai/AppData/Roaming/Sublime Text 3/Packages/User/Preview.sublime-settings",
+		"/C/laragon/Projects/PHPL/demodl/_practical-app/10.php",
+		"/C/laragon/Projects/PHPL/demo/calss_static.php",
+		"/C/laragon/Projects/PHPL/demo/calss_inheretance.php",
+		"/C/laragon/Projects/PHPL/demo/calss_access.php",
+		"/C/laragon/Projects/PHPL/demo/calss_constructor.php",
+		"/C/laragon/Projects/PHPL/demo/calss_car3.php",
+		"/C/laragon/Projects/PHPL/demo/session1.php",
+		"/C/laragon/Projects/PHPL/demodl/_practical-app/9.php",
+		"/C/laragon/Projects/PHPL/demo/cookies.php",
+		"/C/laragon/Projects/PHPL/demo/session2.php",
+		"/C/laragon/Projects/PHPL/demo/post.php",
+		"/C/laragon/Projects/PHPL/demo/get.php",
+		"/C/laragon/Projects/PHPL/demodl/_36_mysql/functions.php",
+		"/C/laragon/Projects/PHPL/demo/mysql/functions.php",
+		"/C/laragon/Projects/PHPL/demo/mysql/db.php",
+		"/C/laragon/Projects/PHPL/demo/mysql/login_create.php",
+		"/C/laragon/Projects/PHPL/demo/mysql/includes/footer.php",
+		"/C/laragon/Projects/PHPL/demo/mysql/includes/header.php",
+		"/C/laragon/Projects/PHPL/demo/mysql/login_delete.php",
+		"/C/laragon/Projects/PHPL/demo/mysql/login.php",
+		"/C/laragon/Projects/PHPL/demo/mysql/login_update_without_functions.php",
+		"/C/laragon/Projects/PHPL/demo/functions.php",
+		"/C/laragon/Projects/PHPL/demo/mysql/login_update.php",
+		"/C/laragon/Projects/PHPL/demo/associated_arrays.php",
+		"/C/laragon/Projects/PHPL/demo/function_return_value.php",
+		"/C/laragon/Projects/PHPL/demodl/_practical-app/4.php",
+		"/C/laragon/Projects/PHPL/demo/functions_parameter.php",
+		"/C/laragon/Projects/PHPL/demo/constants.php",
+		"/C/laragon/Projects/PHPL/demo/global_variable_scope.php",
+		"/C/laragon/Projects/PHPL/demodl/_practical-app/3.php",
+		"/C/laragon/Projects/PHPL/demo/for_each_loop.php",
+		"/C/laragon/Projects/PHPL/demo/switch_statement.php",
+		"/C/laragon/Projects/PHPL/demo/arrays.php",
+		"/C/laragon/Projects/PHPL/demo/math.php",
+		"/C/laragon/Projects/PHPL/demo/for_loop.php",
+		"/C/laragon/Projects/PHPL/demo/forloop.php",
+		"/C/laragon/Projects/PHPL/demo/whileloop.php",
+		"/C/laragon/Projects/PHPL/demo/switchstatement.php",
+		"/C/laragon/Projects/PHPL/demo/comparision_logical_operator.php",
+		"/C/laragon/Projects/PHPL/demo/ifstatement.php",
+		"/C/laragon/Projects/PHPL/demodl/_practical-app/2.php",
+		"/C/laragon/Projects/PHPL/demo/blank.php",
+		"/C/laragon/Projects/PHPL/demo/variables.php",
+		"/C/Users/sprasai/Documents/Dropbox/config.inc.php",
+		"/C/laragon/Projects/PHPL/demodl/_practical-app/1.php",
+		"/C/laragon/Projects/PHPL/demo/comments.php",
 		"/C/Users/sushi/AppData/Roaming/Sublime Text 3/Packages/User/Preview.sublime-settings",
-		"/F/laragon/Projects/PHPL/cmsdl/includes/db.php",
-		"/F/laragon/Projects/PHPL/demo/deleting_files.php",
-		"/F/laragon/Projects/PHPL/demo/delete.txt",
-		"/F/laragon/Projects/PHPL/demo/reading_files.php",
-		"/F/laragon/Projects/PHPL/demo/example.txt",
-		"/F/laragon/Projects/PHPL/demo/embed.php",
-		"/F/laragon/Projects/PHPL/demodl/_practical-app/7.php",
-		"/F/laragon/Projects/PHPL/demo/mysql/login_create.php",
-		"/F/laragon/Projects/PHPL/demo/mysql/login_read_v1.php",
-		"/F/laragon/Projects/PHPL/demo/mysql/login.php",
-		"/F/laragon/Projects/PHPL/demo/form_external_submission.php",
-		"/F/laragon/Projects/PHPL/demo/form_process.php",
-		"/F/laragon/Projects/PHPL/demodl/_practical-app/6.php",
-		"/F/laragon/Projects/PHPL/demodl/_practical-app/5.php",
-		"/F/laragon/Projects/PHPL/demo/predefined_array_functions.php",
-		"/F/laragon/Projects/PHPL/demo/predefined_string_functions.php",
-		"/F/laragon/Projects/PHPL/demo/string_functions.php",
-		"/F/laragon/Projects/PHPL/demo/predefined_math_finctions.php",
-		"/F/laragon/Projects/PHPL/php-self-study.sublime-project",
-		"/F/laragon/Projects/PHPL/php-self-study.sublime-workspace",
-		"/F/laragon/Projects/PHPL/.gitignore",
 		"/F/laragon/Projects/PHPL/demo/comments.php",
-		"/F/laragon/Projects/PHPL/demodl/_practical-app/1.php",
-		"/F/laragon/Projects/PHPL/README.md",
 		"/F/laragon/Projects/PHPL/demo/dynamic_text.php",
 		"/F/laragon/Projects/PHPL/demodl/_blank.php",
 		"/C/Users/sushi/AppData/Roaming/Sublime Text 3/Settings/SideBarEnhancements.json",
 		"/C/Users/sushi/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
 		"/C/Users/sushi/AppData/Roaming/Sublime Text 3/Packages/SideBarEnhancements/Side Bar.sublime-settings",
+		"/F/laragon/Projects/PHPL/php-self-study.sublime-project",
+		"/F/laragon/Projects/PHPL/demo/embed.php",
 		"/F/laragon/www/index.php",
 		"/C/Users/sushi/Desktop/pen drive/ESD-USB/key.txt",
 		"/F/wamp/apps/phpmyadmin4.1.14/config.inc.php",
@@ -385,7 +409,10 @@
 		"/C/Users/sushi/Downloads/specified_ca.sql",
 		"/C/Users/sushi/Downloads/HBP B4 Multi/hbp-b4-multi-lan/wp-content/plugins/yith-woocommerce-wishlist/includes/class.yith-wcwl.php",
 		"/C/Users/sushi/Downloads/HBP B4 Multi/hbp-b4-multi-lan/wp-content/plugins/yith-woocommerce-wishlist/includes/functions.yith-wcwl.php",
-		"/C/Users/sushi/Downloads/HBP B4 Multi/hbp-b4-multi-lan/wp-content/plugins/yith-woocommerce-wishlist/includes/class.yith-wcwl-ui.php"
+		"/C/Users/sushi/Downloads/HBP B4 Multi/hbp-b4-multi-lan/wp-content/plugins/yith-woocommerce-wishlist/includes/class.yith-wcwl-ui.php",
+		"/C/Users/sushi/Downloads/HBP B4 Multi/hbp-b4-multi-lan/wp-content/plugins/yith-woocommerce-wishlist/includes/class.yith-wcwl-shortcode.php",
+		"/C/Users/sushi/Downloads/HBP B4 Multi/hbp-b4-multi-lan/wp-content/plugins/yith-woocommerce-wishlist/includes/class.yith-wcwl-install.php",
+		"/C/Users/sushi/Downloads/HBP B4 Multi/hbp-b4-multi-lan/wp-content/plugins/yith-woocommerce-wishlist/includes/class.yith-wcwl-init.php"
 	],
 	"find":
 	{
@@ -403,31 +430,15 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"{$",
-			"editPostsStep1",
-			"get_val",
-			";",
-			"$row",
-			"pu_",
-			"pu",
-			"_POST",
-			">\n",
-			"th",
-			"detel",
-			"cat_title",
-			">\";\n",
 			"\"",
-			"768",
-			"top",
-			"top10",
-			"Posts",
-			"Post",
-			"Posts",
-			"post_id",
-			" \n",
-			"post_id",
-			"post",
-			"\");\n",
+			"?id",
+			"id",
+			"searchQuery",
+			");\n",
+			"update",
+			"value",
+			"];\n",
+			"echo \"<br>\";",
 			"git config --global core.autocrlf true",
 			"example",
 			"desc",
@@ -447,6 +458,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"delete",
 			"canadapurenutrition",
 			"nutrix_world",
 			"happybiopharma.com"
@@ -460,14 +472,105 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "cms/functions.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 17561,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3845,
+								3845
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1125.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "cms/admin/includes/side_nav.php",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 2210,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1156,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1156,
+								1156
+							]
+						],
+						"settings":
+						{
+							"default_dir": "C:\\laragon\\Projects\\PHPL",
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 34.0
+		"height": 23.0
 	},
 	"input":
 	{
@@ -504,7 +607,7 @@
 	"project": "php-self-study.sublime-project",
 	"replace":
 	{
-		"height": 42.0
+		"height": 86.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -514,36 +617,12 @@
 		"selected_items":
 		[
 			[
-				"fu",
-				"cms\\admin\\functions.php"
-			],
-			[
-				"vi",
-				"cms\\admin\\includes\\view_all_posts.php"
-			],
-			[
-				"index",
-				"cms\\admin\\index.php"
-			],
-			[
-				"nav",
-				"cms\\includes\\nav.php"
-			],
-			[
-				"side",
-				"cms\\includes\\sidebar.php"
+				"func",
+				"cms\\functions.php"
 			],
 			[
 				"inde",
 				"cms\\index.php"
-			],
-			[
-				"na",
-				"cms\\includes\\nav.php"
-			],
-			[
-				"pos",
-				"cms\\post.php"
 			]
 		],
 		"width": 0.0
@@ -574,7 +653,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 243.0,
+	"side_bar_width": 242.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
