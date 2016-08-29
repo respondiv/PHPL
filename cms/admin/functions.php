@@ -432,8 +432,114 @@
     }
 
 
+ // Display different CRUD pages / forms in posts.php depending upon user's interaction
+    function diffCrudInComments(){
+
+        //  get the value from URL to check what user's want to do
+        if (isset($_GET['source'])) {
+            $source = $_GET['source'];
+        }
+        else{
+            $source = "";
+        }
+
+        // Check various Case and display the correct CRUD page request 
+
+        switch ($source) {
+            case 'add_post':
+                include "includes/add_posts.php";      // Include add_posts
+                break;
+
+            case 'edit_post':
+                include "includes/edit_posts.php";      // Include edit_posts
+                break;
+            
+            default:
+                include "includes/view_all_comments.php";      // Include view_all_posts by default
+                break;
+        }
 
 
+    }
+
+    // Return Post Title when Post ID is provided
+    function PostNameFromID($post_id){
+        global $connection;
+        $query = "SELECT * FROM posts WHERE post_id = $post_id ";
+        $post_name = mysqli_query($connection,$query);
+
+        // Check if the query is good
+        querryCheck($post_name);
+
+        while($row = mysqli_fetch_assoc($post_name)){
+        $post_title = $row['post_title'];
+        return $post_title;
+        }
+
+    }
+
+    // Query all the posts
+    function queryAllComments(){
+        global $connection;
+        $query = "SELECT * FROM comments ";
+        $select_all_posts = mysqli_query($connection,$query);
+
+        querryCheck($select_all_posts);
+
+        while($row = mysqli_fetch_assoc($select_all_posts)){
+            $comment_id = $row['comment_id']; 
+            $comment_post_id = $row['comment_post_id']; 
+            $comment_author = $row['comment_author']; 
+            $comment_date = $row['comment_date']; 
+            $comment_content = $row['comment_content']; 
+            // $comment_content = mb_substr($comment_content, 0, 25);
+            $comment_status = $row['comment_status'];
+            $comment_email = $row['comment_email'];
+            $comment_post_title = PostNameFromID($comment_post_id);
+
+            
+            $rows[] = compact('comment_id','comment_post_id','comment_author','comment_date','comment_content','comment_status','comment_email','comment_post_title');
+            
+        }
+            if (empty($rows)) {     // return empty array if no results found
+                $rows = array ();
+            }
+
+            return $rows;       
+     }
+
+     function viewAllComments(){
+         $new_array = queryAllComments();
+
+        if (empty($new_array)) {
+            echo "<div class='alert alert-danger'>";
+            echo "<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>";
+            echo "No Comments Found. Try adding some some Comments first !!";
+            echo "</div>";
+        }
+        else{
+            $new_array = arraySort($new_array, 'comment_date', SORT_DESC);
+            foreach ($new_array as $key => $value) {
+                echo "<tr>";
+                echo "<td class='hide-m'>{$value['comment_id']}</td>";
+                echo "<td><a href='../post.php?p_id={$value['comment_post_id']}' target='_blank'>{$value['comment_post_title']}</a></td>";
+                echo "<td>{$value['comment_content']}</td>";
+                echo "<td class='hide-m'>{$value['comment_author']}</td>";
+                echo "<td class='hide-m'>{$value['comment_email']}</td>";
+                echo "<td>{$value['comment_status']}</td>";
+                echo "<td class='hide-m'>{$value['comment_date']}</td>";
+                echo "<td><a href='comments.php?source=edit_comment&comment_id={$value['comment_id']}'> Edit </a> | ";
+                if ($value["comment_status"] == "approved") {
+                    echo "<a href='comments.php?unapprove={$value['comment_id']}'> Unapprove </a> | ";
+                }
+                else{
+                    echo "<a href='comments.php?approve={$value['comment_id']}'> Approve </a> | ";
+                }
+                echo "<a href='comments.php?delete={$value['comment_id']}'> Delete </a></td>";
+                echo "</tr>";
+            }
+        }
+    }
 
 
 

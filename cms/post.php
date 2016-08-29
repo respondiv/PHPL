@@ -14,9 +14,10 @@
                 <?php displayPost();        // display post ?>
 
                 <hr>
-
                 <!-- Blog Comments -->
+             
                 <?php include 'includes/comments.php' ?>
+
 
             </div>
 

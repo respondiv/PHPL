@@ -482,10 +482,44 @@
             }
         }
 
-
     }
 
 
+    // Return Current Post ID
+    function currentPostID(){
+        if (isset($_GET['p_id'])) {
+            $current_post_id = $_GET['p_id'];
+            return $current_post_id;
+        }
+    }
+
+
+    // Create Comments
+    function createNewComment(){
+        global $connection;
+        if (isset($_POST['comment_submit'])) {
+            $comment_author = $_POST['comment_author'];
+            $comment_email = $_POST['comment_email'];
+            $comment_content = $_POST['comment_content'];
+            $comment_date = date('d-m-y');
+            $comment_status = "pending";
+            $comment_post_id = $_POST['comment_post_id'];
+
+            $query = "INSERT INTO comments(comment_author, comment_email, comment_content, comment_date, comment_status, comment_post_id) ";
+            $query .= "VALUES ('{$comment_author}', '{$comment_email}', '{$comment_content}', now(), '{$comment_status}', $comment_post_id) ";
+
+            $add_new_comment = mysqli_query($connection,$query);
+
+           // Check if the query is good
+           querryCheck($add_new_comment);
+
+           //$comment_id = mysqli_insert_id($connection);
+
+        }
+
+
+
+    }
 
 
 
