@@ -163,7 +163,7 @@
             foreach ($new_array as $key => $value) {
                 echo "<tr>";
                 echo "<td class='hide-m'>{$value['post_id']}</td>";
-                echo "<td>{$value['post_title']}</td>";
+                echo "<td><a href='../post.php?p_id={$value['post_id']}' target='_blank'>{$value['post_title']}</a></td>";
                 echo "<td>{$value['post_author']}</td>";
                 echo "<td class='hide-m'>{$value['post_category_name']}</td>";
                 echo "<td class='hide-m'><img src='../images/{$value['post_image']}' width='90em'></td>";

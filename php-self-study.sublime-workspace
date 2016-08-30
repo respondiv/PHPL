@@ -4,10 +4,6 @@
 		"selected_items":
 		[
 			[
-				"fu",
-				"function"
-			],
-			[
 				"comment_pos",
 				"comment_post_id"
 			],
@@ -265,29 +261,26 @@
 	},
 	"expanded_folders":
 	[
-		"/F/laragon/Projects/PHPL",
-		"/F/laragon/Projects/PHPL/cms",
-		"/F/laragon/Projects/PHPL/cms/admin",
-		"/F/laragon/Projects/PHPL/cms/admin/includes",
-		"/F/laragon/Projects/PHPL/cms/includes"
+		"/C/laragon/Projects/PHPL",
+		"/C/laragon/Projects/PHPL/cms",
+		"/C/laragon/Projects/PHPL/cms/admin",
+		"/C/laragon/Projects/PHPL/cms/admin/includes"
 	],
 	"file_history":
 	[
-		"/F/laragon/Projects/PHPL/cms/includes/comments.php",
-		"/F/laragon/Projects/PHPL/cms/includes/footer.php",
-		"/F/laragon/Projects/PHPL/cms/functions.php",
-		"/F/laragon/Projects/PHPL/cms/admin/includes/edit_comments.php",
-		"/F/laragon/Projects/PHPL/cms/admin/functions.php",
-		"/F/laragon/Projects/PHPL/cms/admin/includes/edit_posts.php",
-		"/F/laragon/Projects/PHPL/cms/admin/includes/view_all_comments.php",
-		"/C/laragon/Projects/PHPL/cms/admin/includes/side_nav.php",
-		"/C/laragon/Projects/PHPL/cms/functions.php",
 		"/C/laragon/Projects/PHPL/cms/post.php",
-		"/C/laragon/Projects/PHPL/cms/includes/comments.php",
-		"/C/laragon/Projects/PHPL/cms/admin/includes/view_all_comments.php",
+		"/C/laragon/Projects/PHPL/cms/admin/users.php",
+		"/C/laragon/Projects/PHPL/cms/admin/includes/view_all_users.php",
+		"/C/laragon/Projects/PHPL/cms/admin/includes/edit_users.php",
+		"/C/laragon/Projects/PHPL/cms/admin/includes/add_users.php",
+		"/C/laragon/Projects/PHPL/cms/admin/posts.php",
 		"/C/laragon/Projects/PHPL/cms/admin/functions.php",
-		"/C/laragon/Projects/PHPL/cms/includes/nav.php",
+		"/C/laragon/Projects/PHPL/cms/functions.php",
 		"/C/laragon/Projects/PHPL/cms/admin/includes/view_all_posts.php",
+		"/C/laragon/Projects/PHPL/cms/admin/includes/view_all_comments.php",
+		"/C/laragon/Projects/PHPL/cms/admin/includes/side_nav.php",
+		"/C/laragon/Projects/PHPL/cms/includes/comments.php",
+		"/C/laragon/Projects/PHPL/cms/includes/nav.php",
 		"/C/laragon/Projects/PHPL/cms/category.php",
 		"/C/laragon/Projects/PHPL/cms/search.php",
 		"/C/laragon/Projects/PHPL/cms/includes/sidebar.php",
@@ -400,7 +393,9 @@
 		"/C/Users/sushi/Downloads/RemoveWat/Leggimi-eleminare messagi.txt",
 		"/F/wamp/www/nw/wp-content/themes/nw/style.css",
 		"/F/wamp/www/nw/wp-content/themes/nw/functions.php",
-		"/C/Users/sushi/Downloads/Adobe Acrobat XI Pro Crack with KEYGEN Only/Instructions.txt"
+		"/C/Users/sushi/Downloads/Adobe Acrobat XI Pro Crack with KEYGEN Only/Instructions.txt",
+		"/E/Software/Adobe Compress/serial.txt",
+		"/F/Clients/binarry.txt"
 	],
 	"find":
 	{
@@ -418,29 +413,6 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"\"",
-			"arraySort",
-			"';",
-			"\"",
-			"_comment",
-			"post",
-			"decline",
-			"post",
-			"POST",
-			"post",
-			"POST",
-			"post",
-			"POST",
-			"post",
-			"POST",
-			"post",
-			"tags",
-			"post",
-			"post_id",
-			"post",
-			"tags",
-			"post",
-			"posts",
 			"$P",
 			"_GET",
 			"'];\n",

@@ -11,7 +11,7 @@
     // Query all the posts
     function queryAllPosts(){
         global $connection;
-        $query = "SELECT * FROM posts";
+        $query = "SELECT * FROM posts WHERE post_status = 'published' ";
         $select_all_posts = mysqli_query($connection,$query);
 
         querryCheck($select_all_posts);
@@ -99,7 +99,7 @@
                         echo "<p class='lead'>";
                             echo "by <a href='#'>{$value['post_author']}</a>";
                         echo "</p>";
-                        echo "<p><span class='glyphicon glyphicon-time'></span> Posted on {$value['post_date']} | <span class='glyphicon glyphicon-briefcase'></span> Posted in {$value['post_category_name']}</p>";
+                        echo "<p><span class='glyphicon glyphicon-time'></span> Posted on {$value['post_date']} | <span class='glyphicon glyphicon-briefcase'></span> Posted in {$value['post_category_name']} | <span class='glyphicon glyphicon-comment'></span> {$value['post_comment_count']} </p>";
                         echo "<hr>";
                         echo "<img class='img-responsive' src='images/{$value['post_image']}'>";
                         echo "<hr>";
@@ -184,7 +184,7 @@
 	                    echo "<p class='lead'>";
 	                        echo "by <a href='#'>{$value['post_author']}</a>";
 	                    echo "</p>";
-	                    echo "<p><span class='glyphicon glyphicon-time'></span> Posted on {$value['post_date']} | <span class='glyphicon glyphicon-briefcase'></span> Posted in {$value['post_category_name']}</p>";
+	                    echo "<p><span class='glyphicon glyphicon-time'></span> Posted on {$value['post_date']} | <span class='glyphicon glyphicon-briefcase'></span> Posted in {$value['post_category_name']} | <span class='glyphicon glyphicon-comment'></span> {$value['post_comment_count']} </p>";
 	                    echo "<hr>";
 	                    echo "<img class='img-responsive' src='images/{$value['post_image']}'>";
 	                    echo "<hr>";
@@ -378,7 +378,7 @@
                 echo "<hr>";
 
                 echo "<!-- Date/Time -->";
-                echo "<p><span class='glyphicon glyphicon-time'></span> Posted on {$post_date} | Posted in {$post_category_name}</p>";
+                echo "<p><span class='glyphicon glyphicon-time'></span> Posted on {$post_date} | Posted in {$post_category_name} | <span class='glyphicon glyphicon-comment'> {$post_comment_count} </p>";
 
                 echo "<hr>";
 
@@ -470,7 +470,7 @@
                         echo "<p class='lead'>";
                             echo "by <a href='#'>{$value['post_author']}</a>";
                         echo "</p>";
-                        echo "<p><span class='glyphicon glyphicon-time'></span> Posted on {$value['post_date']} | <span class='glyphicon glyphicon-briefcase'></span> Posted in {$value['post_category_name']}</p>";
+                        echo "<p><span class='glyphicon glyphicon-time'></span> Posted on {$value['post_date']} | <span class='glyphicon glyphicon-briefcase'></span> Posted in {$value['post_category_name']} | <span class='glyphicon glyphicon-comment'></span> {$value['post_comment_count']} </p>";
                         echo "<hr>";
                         echo "<img class='img-responsive' src='images/{$value['post_image']}'>";
                         echo "<hr>";
